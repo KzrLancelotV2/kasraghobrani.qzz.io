@@ -54,13 +54,16 @@
 
     pepe.src = "/images/pepe.png";
     pepe.alt = "Pepe assistant";
+    pepe.id = "pepe-assistant";
 
     pepe.style.position = "fixed";
-    pepe.style.right = "20px";
-    pepe.style.bottom = "20px";
-    pepe.style.width = "180px";
+    pepe.style.right = "18px";
+    pepe.style.bottom = "18px";
+    pepe.style.width = "75px";
+    pepe.style.height = "auto";
     pepe.style.zIndex = "999999";
     pepe.style.cursor = "pointer";
+    pepe.style.userSelect = "none";
 
     document.body.appendChild(pepe);
 
