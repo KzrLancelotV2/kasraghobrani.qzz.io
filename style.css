@@ -72,3 +72,38 @@ h1 {
 .socials a:hover {
   background: #0066cc;
 }
+
+
+.contact-card {
+margin-top: 30px;
+max-width: 700px;
+margin-left: auto;
+margin-right: auto;
+}
+
+.contact-item {
+background: #f7f7f7;
+border-radius: 12px;
+padding: 18px;
+margin-bottom: 16px;
+transition: transform 0.2s ease;
+}
+
+.contact-item:hover {
+transform: translateY(-2px);
+}
+
+.contact-item strong {
+display: block;
+margin-bottom: 6px;
+font-size: 1.05rem;
+}
+
+.contact-item a {
+color: #2563eb;
+text-decoration: none;
+}
+
+.contact-item a:hover {
+text-decoration: underline;
+}
