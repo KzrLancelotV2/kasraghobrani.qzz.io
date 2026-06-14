@@ -3,10 +3,10 @@
   right: 18px !important;
   bottom: 18px !important;
   z-index: 9999999 !important;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  pointer-events: none;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-end !important;
+  pointer-events: none !important;
 }
 
 #pepe-mascot {
@@ -15,37 +15,34 @@
   cursor: pointer !important;
   user-select: none !important;
   pointer-events: auto !important;
-  transition: transform 0.2s ease;
-  animation: pepeFloat 2.8s ease-in-out infinite;
-
+  transform-origin: center bottom !important;
+  animation: pepeFloat 2.8s ease-in-out infinite !important;
 }
 
-
 #pepe-mascot:hover {
-  transform: scale(1.08) rotate(-3deg);
+  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.25));
 }
 
 #pepe-bubble {
-  max-width: 260px;
-  margin-bottom: 10px;
-  padding: 11px 14px;
-  background: #ffffff;
-  color: #222222;
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
-  font-size: 14px;
-  line-height: 1.4;
+  max-width: 260px !important;
+  margin-bottom: 10px !important;
+  padding: 11px 14px !important;
+  background: #ffffff !important;
+  color: #222222 !important;
+  border-radius: 16px !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22) !important;
+  font-size: 14px !important;
+  line-height: 1.4 !important;
   opacity: 0;
   transform: translateY(8px);
   transition: opacity 0.25s ease, transform 0.25s ease;
-  pointer-events: none;
+  pointer-events: none !important;
 }
 
 #pepe-bubble.visible {
   opacity: 1;
   transform: translateY(0);
 }
-
 
 @keyframes pepeFloat {
   0% {

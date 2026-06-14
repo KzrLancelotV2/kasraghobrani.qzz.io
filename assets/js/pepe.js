@@ -62,11 +62,7 @@
       if (path.includes("project")) return "projects";
       if (path.includes("contact")) return "contact";
 
-      if (
-        path === "/" ||
-        path.includes("index") ||
-        path.includes("home")
-      ) {
+      if (path === "/" || path.includes("index") || path.includes("home")) {
         return "home";
       }
 
@@ -76,7 +72,6 @@
     function getRandomDialogue(pageKey) {
       const pageDialogues = dialogues[pageKey] || dialogues.default;
       const storageKey = "pepe-last-dialogue-" + pageKey;
-
       const lastDialogue = localStorage.getItem(storageKey);
 
       let options = pageDialogues.filter(line => line !== lastDialogue);
@@ -106,18 +101,25 @@
     container.appendChild(pepe);
     document.body.appendChild(container);
 
+    let typingTimer = null;
+
     function typeDialogue(text) {
+      if (typingTimer) {
+        clearInterval(typingTimer);
+      }
+
       bubble.textContent = "";
       bubble.classList.add("visible");
 
       let i = 0;
 
-      const typer = setInterval(() => {
+      typingTimer = setInterval(() => {
         bubble.textContent += text.charAt(i);
         i++;
 
         if (i >= text.length) {
-          clearInterval(typer);
+          clearInterval(typingTimer);
+          typingTimer = null;
         }
       }, 28);
     }
@@ -129,7 +131,6 @@
     }
 
     setTimeout(speakForCurrentPage, 700);
-
     pepe.addEventListener("click", speakForCurrentPage);
   }
 
