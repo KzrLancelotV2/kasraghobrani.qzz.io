@@ -9,16 +9,19 @@
 
 
 
-<img src="/images/pepe.png" style="
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  width: 180px;
-  z-index: 9999999;
-  border: 5px solid red;
-  background: yellow;
-">
+<link rel="stylesheet" href="/assets/css/pepe.css">
 
+<script>
+  const pepe = document.createElement("img");
+  pepe.src = "/images/pepe.png";
+  pepe.id = "pepe-mascot";
+  pepe.alt = "Pepe assistant";
+  document.body.appendChild(pepe);
+
+  pepe.onclick = () => {
+    alert("Pepe is alive.");
+  };
+</script>
 
 
 <body>
@@ -53,21 +56,5 @@
 
 </body>
 
-
-<div style="
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: red;
-  color: white;
-  font-size: 28px;
-  font-weight: bold;
-  text-align: center;
-  z-index: 999999;
-  padding: 15px;
-">
-  TEST CHANGE IS LIVE
-</div>
 
 </html>

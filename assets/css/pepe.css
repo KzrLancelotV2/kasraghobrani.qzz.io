@@ -2,10 +2,9 @@
   position: fixed;
   right: 24px;
   bottom: 24px;
-  width: 120px;
-  z-index: 2147483647;
+  width: 160px;
+  z-index: 9999999;
   cursor: pointer;
-  transition: transform 0.25s ease;
 }
 
 #pepe-mascot:hover {
