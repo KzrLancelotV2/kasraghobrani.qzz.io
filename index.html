@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
 
 <head>
@@ -7,56 +8,60 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-
-
-<link rel="stylesheet" href="/assets/css/pepe.css">
-
-<script>
-  const pepe = document.createElement("img");
-  pepe.src = "/images/pepe.png";
-  pepe.id = "pepe-mascot";
-  pepe.alt = "Pepe assistant";
-  document.body.appendChild(pepe);
-
-  pepe.onclick = () => {
-    alert("Pepe is alive.");
-  };
-</script>
-
-
 <body>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Me</a>
-        <a href="interests.html">Interests</a>
-        <a href="publications.html">Publications</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+```
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="interests.html">Interests</a>
+    <a href="publications.html">Publications</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+</nav>
 
-    <main class="home">
-        <img src="./images/profile.jpg" class="profile" alt="Kasra Ghobrani">
+<main class="home">
+    <img src="./images/profile.jpg" class="profile" alt="Kasra Ghobrani">
 
-        <h1>Kasra Ghobrani</h1>
-        <p class="subtitle">Computer Science undergraduate at the University of Tehran</p>
+    <h1>Kasra Ghobrani</h1>
+    <p class="subtitle">Computer Science undergraduate at the University of Tehran</p>
 
-        <p>
-            I am interested in Artificial Intelligence, Machine Learning, AI for Biology,
-            Computational Biology, Gene Regulatory Networks, Network Science, Economics, and Finance.
-        </p>
+    <p>
+        I am interested in Artificial Intelligence, Machine Learning, AI for Biology,
+        Computational Biology, Gene Regulatory Networks, Network Science, Economics, and Finance.
+    </p>
 
-        <div class="socials">
-            <a href="https://github.com/KzrLancelotV2" target="_blank">GitHub</a>
-            <a href="https://www.linkedin.com/in/kasra-ghorbani-6a904b360" target="_blank">LinkedIn</a>
-            <a href="mailto:kasra.ghorbani@ut.ac.ir">University Email</a>
-            <a href="mailto:kasrauk82@gmail.com">Personal Email</a>
-        </div>
-    </main>
+    <div class="socials">
+        <a href="https://github.com/KzrLancelotV2" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/kasra-ghorbani-6a904b360" target="_blank">LinkedIn</a>
+        <a href="mailto:kasra.ghorbani@ut.ac.ir">University Email</a>
+        <a href="mailto:kasrauk82@gmail.com">Personal Email</a>
+    </div>
+</main>
+
+<script>
+    alert("Pepe script executing");
+
+    const pepe = document.createElement("img");
+
+    pepe.src = "/images/pepe.png";
+    pepe.alt = "Pepe assistant";
+
+    pepe.style.position = "fixed";
+    pepe.style.right = "20px";
+    pepe.style.bottom = "20px";
+    pepe.style.width = "180px";
+    pepe.style.zIndex = "999999";
+    pepe.style.cursor = "pointer";
+
+    document.body.appendChild(pepe);
+
+    pepe.onclick = () => {
+        alert("Pepe is alive.");
+    };
+</script>
+```
 
 </body>
 
-<script>
-  alert("JavaScript is running");
-</script>
 </html>
