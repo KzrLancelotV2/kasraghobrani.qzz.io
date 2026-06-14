@@ -99,7 +99,7 @@
 
     const pepe = document.createElement("img");
     pepe.id = "pepe-mascot";
-    pepe.src = "/images/pepe.png";
+    pepe.src = "/images/pepe.svg";
     pepe.alt = "Pepe assistant";
 
     container.appendChild(bubble);
