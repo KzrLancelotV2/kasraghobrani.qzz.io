@@ -46,3 +46,25 @@
     initPepe();
   }
 })();
+
+
+
+(function () {
+    const pepe = document.createElement("img");
+
+    pepe.src = "/images/pepe.png";
+    pepe.alt = "Pepe assistant";
+
+    pepe.style.position = "fixed";
+    pepe.style.right = "20px";
+    pepe.style.bottom = "20px";
+    pepe.style.width = "180px";
+    pepe.style.zIndex = "999999";
+    pepe.style.cursor = "pointer";
+
+    document.body.appendChild(pepe);
+
+    pepe.onclick = () => {
+        alert("Pepe is alive.");
+    };
+})();
