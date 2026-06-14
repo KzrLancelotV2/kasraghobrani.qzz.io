@@ -1,98 +1,48 @@
-const pepe = document.createElement("img");
-pepe.id = "pepe-mascot";
-pepe.src = "/images/pepe.png";
-document.body.appendChild(pepe);
+(function () {
+  function initPepe() {
+    if (document.getElementById("pepe-mascot")) return;
 
-const bubble = document.createElement("div");
-bubble.id = "pepe-bubble";
-document.body.appendChild(bubble);
+    const pepe = document.createElement("img");
+    pepe.id = "pepe-mascot";
+    pepe.src = "/images/pepe.png";
+    pepe.alt = "Pepe assistant";
+    document.body.appendChild(pepe);
 
-let x = 100;
-let y = 100;
-let targetX = 300;
-let targetY = 200;
-let lastActivity = Date.now();
+    const bubble = document.createElement("div");
+    bubble.id = "pepe-bubble";
+    document.body.appendChild(bubble);
 
-const pageLines = {
-  "/": "Welcome to Kasra's research swamp.",
-  "/about/": "Lore section unlocked.",
-  "/publications/": "No papers yet? We cookin'.",
-  "/projects/": "Projects? Graphs? Biology? Very based.",
-  "/cv/": "Inspecting the credentials...",
-  "/interests/": "AI for Biology detected. Pepe approves."
-};
+    const lines = [
+      "welcome to the research swamp",
+      "bro is building an academic website",
+      "AI for Biology arc detected",
+      "gene regulatory networks? ribbiting",
+      "clicking me increases publication probability by 0%",
+      "this website is under construction but spiritually complete"
+    ];
 
-const randomLines = [
-  "bro is really building an academic website",
-  "gene regulatory networks? sounds ribbiting",
-  "this site is under construction, but spiritually complete",
-  "hire him before the frog does",
-  "network science moment",
-  "computational biology arc begins"
-];
+    function say(text, duration = 3000) {
+      bubble.innerText = text;
+      bubble.style.display = "block";
 
-function say(text, duration = 3000) {
-  bubble.innerText = text;
-  bubble.style.display = "block";
+      setTimeout(() => {
+        bubble.style.display = "none";
+      }, duration);
+    }
 
-  setTimeout(() => {
-    bubble.style.display = "none";
-  }, duration);
-}
+    pepe.addEventListener("click", function () {
+      const line = lines[Math.floor(Math.random() * lines.length)];
+      say(line);
+    });
 
-function moveBubble() {
-  bubble.style.left = x + 80 + "px";
-  bubble.style.top = y - 20 + "px";
-}
-
-function chooseNewTarget() {
-  targetX = Math.random() * (window.innerWidth - 120);
-  targetY = Math.random() * (window.innerHeight - 120);
-}
-
-function animate() {
-  x += (targetX - x) * 0.01;
-  y += (targetY - y) * 0.01;
-
-  pepe.style.left = x + "px";
-  pepe.style.top = y + "px";
-
-  moveBubble();
-
-  if (Math.abs(targetX - x) < 10 && Math.abs(targetY - y) < 10) {
-    chooseNewTarget();
+    setTimeout(() => {
+      say("Pepe assistant online.");
+    }, 700);
   }
 
-  if (Date.now() - lastActivity > 15000) {
-    pepe.style.transform = "rotate(90deg)";
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initPepe);
   } else {
-    pepe.style.transform = "rotate(0deg)";
+    initPepe();
   }
-
-  requestAnimationFrame(animate);
-}
-
-document.addEventListener("mousemove", () => {
-  lastActivity = Date.now();
-});
-
-document.addEventListener("click", () => {
-  lastActivity = Date.now();
-});
-
-pepe.addEventListener("click", () => {
-  const line = randomLines[Math.floor(Math.random() * randomLines.length)];
-  say(line);
-});
-
-window.addEventListener("load", () => {
-  const path = window.location.pathname;
-  say(pageLines[path] || "Pepe has entered the website.");
-  chooseNewTarget();
-  animate();
-});
-
-setInterval(() => {
-  const line = randomLines[Math.floor(Math.random() * randomLines.length)];
-  say(line, 2500);
-}, 20000);
+})();

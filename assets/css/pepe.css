@@ -1,25 +1,28 @@
 #pepe-mascot {
   position: fixed;
-  width: 90px;
-  z-index: 99999;
-  pointer-events: auto;
+  right: 24px;
+  bottom: 24px;
+  width: 120px;
+  z-index: 2147483647;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: transform 0.25s ease;
 }
 
 #pepe-mascot:hover {
-  transform: scale(1.12) rotate(-5deg);
+  transform: scale(1.08) rotate(-3deg);
 }
 
 #pepe-bubble {
   position: fixed;
-  max-width: 240px;
+  right: 155px;
+  bottom: 115px;
+  max-width: 260px;
   background: white;
   color: #222;
   padding: 10px 14px;
   border-radius: 14px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.18);
   font-size: 14px;
-  z-index: 100000;
+  z-index: 2147483647;
   display: none;
 }
