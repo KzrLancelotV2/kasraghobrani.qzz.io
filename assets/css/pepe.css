@@ -16,7 +16,10 @@
   user-select: none !important;
   pointer-events: auto !important;
   transition: transform 0.2s ease;
+  animation: pepeFloat 2.8s ease-in-out infinite;
+
 }
+
 
 #pepe-mascot:hover {
   transform: scale(1.08) rotate(-3deg);
@@ -41,4 +44,27 @@
 #pepe-bubble.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+
+@keyframes pepeFloat {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  25% {
+    transform: translateY(-4px) rotate(-1deg);
+  }
+
+  50% {
+    transform: translateY(-8px) rotate(0deg);
+  }
+
+  75% {
+    transform: translateY(-4px) rotate(1deg);
+  }
+
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
 }
