@@ -17,26 +17,49 @@
   pointer-events: auto !important;
   transform-origin: center bottom !important;
   animation: pepeFloat 2.8s ease-in-out infinite !important;
+  filter:
+    drop-shadow(0 0 7px #00f5ff)
+    drop-shadow(0 0 14px rgba(255, 43, 214, 0.65));
 }
 
 #pepe-mascot:hover {
-  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.25));
+  filter:
+    drop-shadow(0 0 10px #39ff14)
+    drop-shadow(0 0 20px #00f5ff);
 }
 
 #pepe-bubble {
-  max-width: 260px !important;
-  margin-bottom: 10px !important;
-  padding: 11px 14px !important;
-  background: #ffffff !important;
-  color: #222222 !important;
+  max-width: 270px !important;
+  margin-bottom: 12px !important;
+  padding: 12px 15px !important;
+  background: rgba(6, 6, 20, 0.92) !important;
+  color: #e8faff !important;
+  border: 1px solid #00f5ff !important;
   border-radius: 16px !important;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22) !important;
+  box-shadow:
+    0 0 14px rgba(0, 245, 255, 0.55),
+    0 0 28px rgba(255, 43, 214, 0.25),
+    inset 0 0 14px rgba(0, 245, 255, 0.08) !important;
+  font-family: 'Share Tech Mono', monospace !important;
   font-size: 14px !important;
   line-height: 1.4 !important;
   opacity: 0;
   transform: translateY(8px);
   transition: opacity 0.25s ease, transform 0.25s ease;
   pointer-events: none !important;
+}
+
+#pepe-bubble::after {
+  content: "";
+  position: absolute;
+  right: 22px;
+  bottom: -8px;
+  width: 14px;
+  height: 14px;
+  background: rgba(6, 6, 20, 0.92);
+  border-right: 1px solid #00f5ff;
+  border-bottom: 1px solid #00f5ff;
+  transform: rotate(45deg);
 }
 
 #pepe-bubble.visible {

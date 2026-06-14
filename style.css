@@ -1,109 +1,302 @@
-body {
-  font-family: Arial, sans-serif;
-  background: #f6f6f6;
-  color: #222;
-  line-height: 1.6;
-  margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Share+Tech+Mono&display=swap');
+
+:root {
+    --bg-dark: #050510;
+    --bg-card: rgba(12, 12, 32, 0.82);
+    --neon-cyan: #00f5ff;
+    --neon-pink: #ff2bd6;
+    --neon-purple: #8f00ff;
+    --neon-green: #39ff14;
+    --text-main: #e8faff;
+    --text-muted: #9fb7c4;
 }
 
+/* Global */
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Share Tech Mono', monospace;
+    color: var(--text-main);
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255, 43, 214, 0.22), transparent 30%),
+        radial-gradient(circle at 80% 10%, rgba(0, 245, 255, 0.20), transparent 32%),
+        radial-gradient(circle at 50% 90%, rgba(143, 0, 255, 0.24), transparent 35%),
+        linear-gradient(135deg, #03030a 0%, #080820 50%, #03030a 100%);
+    overflow-x: hidden;
+}
+
+/* Cyberpunk grid overlay */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(0, 245, 255, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 43, 214, 0.08) 1px, transparent 1px);
+    background-size: 42px 42px;
+    mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+    pointer-events: none;
+    z-index: -2;
+}
+
+/* Moving neon haze */
+body::after {
+    content: "";
+    position: fixed;
+    inset: -20%;
+    background:
+        conic-gradient(
+            from 180deg,
+            transparent,
+            rgba(0, 245, 255, 0.08),
+            transparent,
+            rgba(255, 43, 214, 0.10),
+            transparent
+        );
+    animation: neonRotate 18s linear infinite;
+    pointer-events: none;
+    z-index: -3;
+}
+
+@keyframes neonRotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Navigation */
 nav {
-  background: white;
-  padding: 18px 40px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-  text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 18px 40px;
+    text-align: center;
+    background: rgba(5, 5, 16, 0.78);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(0, 245, 255, 0.35);
+    box-shadow:
+        0 0 18px rgba(0, 245, 255, 0.18),
+        0 0 35px rgba(255, 43, 214, 0.08);
 }
 
 nav a {
-  color: #222;
-  text-decoration: none;
-  margin: 0 14px;
-  font-weight: 600;
+    color: var(--text-main);
+    text-decoration: none;
+    margin: 0 14px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.82rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
 }
 
 nav a:hover {
-  color: #0066cc;
+    color: var(--neon-cyan);
+    text-shadow:
+        0 0 6px var(--neon-cyan),
+        0 0 14px var(--neon-cyan);
 }
 
+/* Main Card */
 main {
-  max-width: 820px;
-  margin: 60px auto;
-  background: white;
-  padding: 45px;
-  border-radius: 18px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    max-width: 860px;
+    margin: 70px auto;
+    padding: 48px;
+    background: var(--bg-card);
+    border: 1px solid rgba(0, 245, 255, 0.35);
+    border-radius: 24px;
+    box-shadow:
+        0 0 22px rgba(0, 245, 255, 0.18),
+        0 0 55px rgba(255, 43, 214, 0.12),
+        inset 0 0 35px rgba(255, 255, 255, 0.025);
+    backdrop-filter: blur(18px);
 }
 
 .home {
-  text-align: center;
+    text-align: center;
 }
 
+/* Profile image */
 .profile {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 20px;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--neon-cyan);
+    box-shadow:
+        0 0 18px var(--neon-cyan),
+        0 0 34px rgba(255, 43, 214, 0.55);
+    margin-bottom: 24px;
 }
 
+/* Typography */
 h1 {
-  font-size: 42px;
-  margin-bottom: 10px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 42px;
+    margin-bottom: 12px;
+    color: white;
+    letter-spacing: 2px;
+    text-shadow:
+        0 0 7px var(--neon-cyan),
+        0 0 18px rgba(0, 245, 255, 0.65),
+        0 0 32px rgba(255, 43, 214, 0.45);
+}
+
+h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--neon-cyan);
+    margin-top: 36px;
+    text-shadow: 0 0 12px rgba(0, 245, 255, 0.7);
+}
+
+p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--text-main);
 }
 
 .subtitle {
-  font-size: 20px;
-  color: #555;
+    font-size: 1.18rem;
+    color: var(--text-muted);
+    margin-bottom: 28px;
 }
 
+/* Lists */
+ul {
+    text-align: left;
+    max-width: 650px;
+    margin: 30px auto;
+}
+
+li {
+    margin: 12px 0;
+    color: var(--text-main);
+}
+
+li::marker {
+    color: var(--neon-pink);
+}
+
+/* Social buttons */
 .socials {
-  margin-top: 30px;
+    margin-top: 34px;
 }
 
 .socials a {
-  display: inline-block;
-  margin: 8px;
-  padding: 10px 18px;
-  background: #222;
-  color: white;
-  border-radius: 8px;
-  text-decoration: none;
+    display: inline-block;
+    margin: 8px;
+    padding: 12px 18px;
+    color: var(--neon-cyan);
+    border: 1px solid var(--neon-cyan);
+    border-radius: 10px;
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: rgba(0, 245, 255, 0.06);
+    box-shadow:
+        0 0 10px rgba(0, 245, 255, 0.25),
+        inset 0 0 10px rgba(0, 245, 255, 0.08);
+    transition: all 0.2s ease;
 }
 
 .socials a:hover {
-  background: #0066cc;
+    color: #050510;
+    background: var(--neon-cyan);
+    box-shadow:
+        0 0 14px var(--neon-cyan),
+        0 0 30px rgba(0, 245, 255, 0.7);
+    transform: translateY(-2px);
 }
 
-
+/* Contact page */
 .contact-card {
-margin-top: 30px;
-max-width: 700px;
-margin-left: auto;
-margin-right: auto;
+    margin-top: 34px;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .contact-item {
-background: #f7f7f7;
-border-radius: 12px;
-padding: 18px;
-margin-bottom: 16px;
-transition: transform 0.2s ease;
+    background: rgba(255, 255, 255, 0.045);
+    border: 1px solid rgba(255, 43, 214, 0.35);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 18px;
+    text-align: left;
+    box-shadow:
+        0 0 16px rgba(255, 43, 214, 0.12),
+        inset 0 0 18px rgba(255, 255, 255, 0.02);
+    transition: all 0.2s ease;
 }
 
 .contact-item:hover {
-transform: translateY(-2px);
+    transform: translateY(-3px);
+    border-color: var(--neon-cyan);
+    box-shadow:
+        0 0 18px rgba(0, 245, 255, 0.22),
+        0 0 35px rgba(255, 43, 214, 0.12);
 }
 
 .contact-item strong {
-display: block;
-margin-bottom: 6px;
-font-size: 1.05rem;
+    display: block;
+    margin-bottom: 8px;
+    color: var(--neon-pink);
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 1px;
 }
 
 .contact-item a {
-color: #2563eb;
-text-decoration: none;
+    color: var(--neon-cyan);
+    text-decoration: none;
 }
 
 .contact-item a:hover {
-text-decoration: underline;
+    text-shadow: 0 0 10px var(--neon-cyan);
+}
+
+/* Normal links */
+a {
+    color: var(--neon-cyan);
+}
+
+a:hover {
+    color: var(--neon-pink);
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+    nav {
+        padding: 16px 14px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 6px 8px;
+        font-size: 0.72rem;
+    }
+
+    main {
+        margin: 36px 14px;
+        padding: 30px 22px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .profile {
+        width: 145px;
+        height: 145px;
+    }
+
+    .socials a {
+        display: block;
+        max-width: 240px;
+        margin: 10px auto;
+    }
 }
