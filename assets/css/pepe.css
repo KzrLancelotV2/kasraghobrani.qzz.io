@@ -1,7 +1,7 @@
 #pepe-container {
   position: fixed !important;
-  right: 18px !important;
-  bottom: 18px !important;
+  right: 25px !important;
+  bottom: 25px !important;
   z-index: 9999999 !important;
   display: flex !important;
   flex-direction: column !important;
@@ -10,7 +10,7 @@
 }
 
 #pepe-mascot {
-  width: 75px !important;
+  width: 115px !important;
   height: auto !important;
   cursor: pointer !important;
   user-select: none !important;
@@ -29,7 +29,7 @@
 }
 
 #pepe-bubble {
-  max-width: 270px !important;
+  max-width: 340px !important;
   margin-bottom: 12px !important;
   padding: 12px 15px !important;
   background: rgba(6, 6, 20, 0.92) !important;
@@ -41,7 +41,7 @@
     0 0 28px rgba(255, 43, 214, 0.25),
     inset 0 0 14px rgba(0, 245, 255, 0.08) !important;
   font-family: 'Share Tech Mono', monospace !important;
-  font-size: 14px !important;
+  font-size: 16px !important;
   line-height: 1.4 !important;
   opacity: 0;
   transform: translateY(8px);

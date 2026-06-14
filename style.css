@@ -381,3 +381,51 @@ a:hover {
     font-size: 0.82rem;
     box-shadow: inset 0 0 10px rgba(0, 245, 255, 0.06);
 }
+
+
+
+
+/* Research cards with images */
+
+.research-card {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.research-media {
+    flex: 0 0 145px;
+}
+
+.research-media img {
+    width: 145px;
+    height: 145px;
+    object-fit: contain;
+    border-radius: 18px;
+    padding: 14px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(0, 245, 255, 0.35);
+    box-shadow:
+        0 0 14px rgba(0, 245, 255, 0.25),
+        0 0 24px rgba(255, 43, 214, 0.12);
+}
+
+.research-content {
+    flex: 1;
+}
+
+@media (max-width: 800px) {
+    .research-card {
+        flex-direction: column;
+    }
+
+    .research-media {
+        flex: none;
+        width: 100%;
+    }
+
+    .research-media img {
+        width: 120px;
+        height: 120px;
+    }
+}
