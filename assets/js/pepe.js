@@ -50,6 +50,15 @@
         "This page is also part of the swamp.",
         "Navigation complete. Frog remains.",
         "Interesting tab. Pepe is watching."
+      ],
+
+
+
+      research: [
+        "Research page detected. Serious frog mode activated.",
+        "AI Virtual Cells, GRNs, perturbations... this is the lore-heavy section.",
+        "Westlake arc, Tehran arc, UESTC arc. Character development confirmed.",
+        "This is where the academic swamp gets real."
       ]
     };
 
@@ -61,6 +70,7 @@
       if (path.includes("publication")) return "publications";
       if (path.includes("project")) return "projects";
       if (path.includes("contact")) return "contact";
+      if (path.includes("research")) return "research";
 
       if (path === "/" || path.includes("index") || path.includes("home")) {
         return "home";
