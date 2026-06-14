@@ -1,11 +1,21 @@
-#pepe-mascot {
+#pepe-container {
   position: fixed !important;
   right: 18px !important;
   bottom: 18px !important;
+  z-index: 9999999 !important;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  pointer-events: none;
+}
+
+#pepe-mascot {
   width: 75px !important;
   height: auto !important;
-  z-index: 9999999 !important;
   cursor: pointer !important;
+  user-select: none !important;
+  pointer-events: auto !important;
+  transition: transform 0.2s ease;
 }
 
 #pepe-mascot:hover {
@@ -13,16 +23,22 @@
 }
 
 #pepe-bubble {
-  position: fixed;
-  right: 155px;
-  bottom: 115px;
   max-width: 260px;
-  background: white;
-  color: #222;
-  padding: 10px 14px;
-  border-radius: 14px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+  margin-bottom: 10px;
+  padding: 11px 14px;
+  background: #ffffff;
+  color: #222222;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
   font-size: 14px;
-  z-index: 2147483647;
-  display: none;
+  line-height: 1.4;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  pointer-events: none;
+}
+
+#pepe-bubble.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
