@@ -1,10 +1,11 @@
 #pepe-mascot {
-  position: fixed;
-  right: 24px;
-  bottom: 24px;
-  width: 160px;
-  z-index: 9999999;
-  cursor: pointer;
+  position: fixed !important;
+  right: 18px !important;
+  bottom: 18px !important;
+  width: 75px !important;
+  height: auto !important;
+  z-index: 9999999 !important;
+  cursor: pointer !important;
 }
 
 #pepe-mascot:hover {
