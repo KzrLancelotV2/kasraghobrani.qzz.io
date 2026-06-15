@@ -424,8 +424,25 @@ a:hover {
         width: 100%;
     }
 
+
     .research-media img {
-        width: 120px;
-        height: 120px;
-    }
+    width: 145px;
+    height: 145px;
+    object-fit: contain;
+    border-radius: 18px;
+    padding: 18px;
+
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(0, 245, 255, 0.55);
+
+    box-shadow:
+        0 0 18px rgba(0, 245, 255, 0.32),
+        0 0 28px rgba(255, 43, 214, 0.16);
+
+    filter:
+        invert(1)
+        brightness(1.6)
+        contrast(1.15)
+        drop-shadow(0 0 6px rgba(0, 245, 255, 0.45));
+}
 }

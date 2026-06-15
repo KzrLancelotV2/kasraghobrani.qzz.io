@@ -10,7 +10,7 @@
 }
 
 #pepe-mascot {
-  width: 165px !important;
+  width: 215px !important;
   height: auto !important;
   cursor: pointer !important;
   user-select: none !important;
@@ -41,7 +41,7 @@
     0 0 28px rgba(255, 43, 214, 0.25),
     inset 0 0 14px rgba(0, 245, 255, 0.08) !important;
   font-family: 'Share Tech Mono', monospace !important;
-  font-size: 18px !important;
+  font-size: 19px !important;
   line-height: 1.4 !important;
   opacity: 0;
   transform: translateY(8px);
