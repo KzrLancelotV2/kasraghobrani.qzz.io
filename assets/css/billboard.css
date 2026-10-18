@@ -1,0 +1,30 @@
+.greeting-board { --sign-color: #ff79e1; position: relative; box-sizing: border-box; margin: -12px -12px 30px; padding: 19px 25px 16px; text-align: left; color: #a8b6c4; border: 1px solid #5b506a; border-radius: 12px; background: linear-gradient(130deg, #20212c, #0b0e17 50%, #25202c); box-shadow: 0 12px 32px #0008, 0 0 28px #ff2bd61c, inset 0 1px #ffffff24; }
+.greeting-board::before, .greeting-board::after { content: '+'; position: absolute; top: 7px; font: 12px monospace; color: #707383; }
+.greeting-board::before { left: 9px; } .greeting-board::after { right: 9px; }
+.board-topline, .board-controls { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.board-topline { padding: 0 2px 13px; font: 11px 'Share Tech Mono', monospace; letter-spacing: .18em; }
+.board-power { display: inline-block; width: 6px; height: 6px; border-radius: 50%; margin-right: 9px; background: #55f0cf; box-shadow: 0 0 7px #55f0cf; }
+.board-screen { position: relative; overflow: hidden; display: grid; align-content: center; min-height: 130px; padding: 12px 20px; border: 1px solid #433145; border-radius: 4px; background: radial-gradient(ellipse at center, #ff2bd60d, transparent 80%), radial-gradient(circle, #38405480 .7px, transparent 1px) 0 0 / 5px 5px, #070910; box-shadow: inset 0 3px 18px #000, 0 0 10px #ff2bd60c; }
+.board-screen::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: repeating-linear-gradient(transparent 0 3px, #0002 3px 4px); }
+.board-message { display: block; text-align: center; margin: 0; min-height: 1.6em; font: 600 clamp(1.5rem, 3.6vw, 2.7rem)/1.6 'Share Tech Mono', 'Microsoft YaHei', 'Yu Gothic', 'Malgun Gothic', system-ui, sans-serif; letter-spacing: .015em; color: var(--sign-color); text-shadow: 0 0 7px #ff62d770, 0 0 20px #ff2bd640; overflow-wrap: anywhere; }
+@supports (background-clip: text) { .board-letters { color: transparent; background: radial-gradient(circle, #ffc7f4 0 .65px, #ff79e1 .8px 1.35px, transparent 1.6px) 0 0 / 3px 3px; background-clip: text; -webkit-background-clip: text; filter: drop-shadow(0 0 3px #ff2bd680); text-shadow: none; } }
+.board-cursor { display: inline-block; width: .48em; height: .85em; background: #ff91e8; margin-inline-start: .14em; vertical-align: -.05em; box-shadow: 0 0 8px #ff2bd680; animation: board-caret 1.15s steps(1) infinite; }
+.greeting-board[data-paused="true"] .board-cursor { animation: none; opacity: .35; }
+.board-controls { padding-top: 13px; min-height: 38px; font: 12px 'Share Tech Mono', 'Microsoft YaHei', monospace; }
+.board-language { color: #91e4eb; }
+.board-buttons { display: flex; gap: 6px; }
+.board-buttons button { min-height: 36px; min-width: 36px; padding: 5px 10px; border: 1px solid #475266; border-radius: 4px; background: #0b101c; color: #d4e7ef; cursor: pointer; font: inherit; }
+.board-buttons button:hover { color: #fff; border-color: #ff79e1; background: #28152b; }
+.board-buttons button:focus-visible { outline: 2px solid #00f5ff; outline-offset: 3px; }
+.board-buttons button[hidden] { display: none; }
+.board-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+.home.with-billboard .profile { width: 112px; height: 112px; margin-bottom: 8px; }
+.home.with-billboard h1 { margin-top: 10px; }
+@keyframes board-caret { 0%, 55% { opacity: 1; } 56%, 100% { opacity: 0; } }
+@media (max-width: 700px) { .greeting-board { margin: -8px -8px 25px; padding: 17px 12px 12px; } .board-screen { padding: 10px 8px; min-height: 120px; } .board-topline { font-size: 10px; letter-spacing: .1em; } .board-controls { flex-wrap: wrap; } .board-buttons button { min-height: 44px; min-width: 44px; } .board-message { font-size: clamp(1.25rem, 5vw, 2rem); } }
+@media (prefers-reduced-motion: reduce) { .board-cursor { animation: none; opacity: .35; } }
+@media (max-width: 700px) {
+  body:has(.greeting-board) #pepe-container { right: 10px !important; bottom: 10px !important; }
+  body:has(.greeting-board) #pepe-mascot { width: 90px !important; }
+  body:has(.greeting-board) #pepe-bubble { max-width: 180px !important; font-size: 13px !important; padding: 8px 10px !important; }
+}

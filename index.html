@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="/assets/css/pepe.css?v=cyberpunk1">
     <link rel="stylesheet" href="/assets/css/i18n.css?v=1">
     <script src="/assets/js/i18n.js?v=2" defer></script>
+    <link rel="stylesheet" href="/assets/css/billboard.css?v=1">
+    <script src="/assets/js/billboard.js?v=1" defer></script>
 </head>
 
 
@@ -31,7 +33,27 @@
     </span>
 </nav>
 
-<main class="home">
+<main class="home with-billboard">
+    <section class="greeting-board" aria-label="Multilingual greetings" data-no-translate data-paused="true">
+        <div class="board-topline">
+            <span><span class="board-power" aria-hidden="true"></span><span class="board-heading">HELLO, WORLD</span></span>
+            <span class="board-counter" aria-hidden="true">01 / 11</span>
+        </div>
+        <div class="board-screen">
+            <p class="board-message" lang="en" dir="ltr" aria-live="off">
+                <span aria-hidden="true"><span class="board-letters">Hi, I'm Kasra!</span><span class="board-cursor"></span></span>
+                <span class="board-sr-only">Hi, I'm Kasra!</span>
+            </p>
+        </div>
+        <div class="board-controls">
+            <span class="board-language" lang="en">English</span>
+            <div class="board-buttons">
+                <button type="button" data-board="previous" aria-label="Previous greeting" hidden>←</button>
+                <button type="button" data-board="toggle" aria-label="Pause greetings" hidden>Pause</button>
+                <button type="button" data-board="next" aria-label="Next greeting" hidden>→</button>
+            </div>
+        </div>
+    </section>
     <img src="./images/profile.jpg" class="profile" alt="Kasra Ghobrani">
 
     <h1>Kasra Ghobrani</h1>
