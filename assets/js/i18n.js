@@ -1,5 +1,7 @@
 (() => {
   const zh = {
+    "I also love gaming: Valorant, Genshin Impact, Honkai: Star Rail, and a LOT of indie games.": "我也很爱玩游戏：《无畏契约》（Valorant）、《原神》、《崩坏：星穹铁道》，还有一大堆独立游戏。",
+    "🎮 Valorant, Genshin Impact, Honkai: Star Rail, and indie games": "🎮 《无畏契约》、《原神》、《崩坏：星穹铁道》与独立游戏",
     "Home": "首页", "About": "关于我", "About Me": "关于我", "Research": "科研", "Projects": "项目", "Publications": "学术论文", "Gallery": "相册", "Contact": "联系我", "Interests": "研究兴趣",
     "Research projects": "研究项目", "Research experience": "科研经历",
     "Papers on Google Scholar ↗": "在谷歌学术查看论文 ↗", "Code on GitHub ↗": "在 GitHub 查看代码 ↗",
