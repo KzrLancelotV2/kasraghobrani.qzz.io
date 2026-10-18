@@ -1,5 +1,6 @@
 (() => {
   const zh = {
+    "Beta Lab": "Beta 实验室",
     "Gallery unlocked. Proof that Kasra occasionally goes outside.": "相册已解锁。看来 Kasra 偶尔也会出门。",
     "I was behind the camera. Very difficult with frog hands.": "照片是我拍的。用青蛙的手拍照可不容易。",
     "No graphs, no datasets. Just a few moments worth keeping.": "没有图表，没有数据集。只有一些值得留下的瞬间。",
@@ -35,7 +36,7 @@
     "🏋️ Regular gym-goer": "🏋️ 坚持规律健身",
     "🐸 Maintainer of a website with a suspiciously intelligent frog assistant": "🐸 维护着一个配有聪明得有点可疑的青蛙助手的网站",
     "My research interests lie at the intersection of artificial intelligence, machine learning, computational biology, graph learning, and network science.": "我的研究兴趣集中于人工智能、机器学习、计算生物学、图学习与网络科学的交叉领域。",
-    "AI for Scientific Simulation and Discovery Lab": "科学模拟与发现人工智能实验室",
+    "AI Research and Innovation Laboratory": "人工智能研究与创新实验室",
     "Westlake University · Apr 2026 – Present": "西湖大学 · 2026年4月至今",
     "Hangzhou, China": "中国杭州",
     "Research under Prof. Stan Z. Li on AI for life sciences, focusing on AI Virtual Cell models, gene regulatory network inference, perturbation response prediction, and active learning for experimental design.": "在 Stan Z. Li 教授指导下开展面向生命科学的人工智能研究，重点关注 AI 虚拟细胞模型、基因调控网络推断、扰动响应预测，以及用于实验设计的主动学习。",
