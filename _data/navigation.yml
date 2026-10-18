@@ -6,7 +6,5 @@ main:
     url: /about.html
   - title: "Research"
     url: /research.html
-  - title: "Gallery"
-    url: /gallery.html
   - title: "Contact"
     url: /contact.html
