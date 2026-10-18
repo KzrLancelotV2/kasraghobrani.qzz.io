@@ -38,6 +38,14 @@
         "Pepe predicts 3 bugs and 1 breakthrough."
       ],
 
+      gallery: [
+        "Gallery unlocked. Proof that Kasra occasionally goes outside.",
+        "I was behind the camera. Very difficult with frog hands.",
+        "No graphs, no datasets. Just a few moments worth keeping.",
+        "Still waiting for my own portrait in this gallery.",
+        "Click a photo for a closer look. I will guard the archive."
+],
+
       contact: [
         "Need to contact Kasra? Choose your weapon: email, GitHub, LinkedIn.",
         "Professional networking swamp entrance.",
@@ -65,6 +73,7 @@
     function getPageKey() {
       const path = window.location.pathname.toLowerCase();
 
+      if (path.includes("gallery")) return "gallery";
       if (path.includes("about")) return "about";
       if (path.includes("interest")) return "interests";
       if (path.includes("publication")) return "publications";

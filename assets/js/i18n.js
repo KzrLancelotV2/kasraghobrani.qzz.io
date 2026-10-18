@@ -1,5 +1,11 @@
 (() => {
   const zh = {
+    "Gallery unlocked. Proof that Kasra occasionally goes outside.": "相册已解锁。看来 Kasra 偶尔也会出门。",
+    "I was behind the camera. Very difficult with frog hands.": "照片是我拍的。用青蛙的手拍照可不容易。",
+    "No graphs, no datasets. Just a few moments worth keeping.": "没有图表，没有数据集。只有一些值得留下的瞬间。",
+    "Still waiting for my own portrait in this gallery.": "还在等我的肖像被放进这个相册。",
+    "Click a photo for a closer look. I will guard the archive.": "点开照片仔细看看吧。相册就交给我看守了。",
+
     "🧬 Interested in AI4Bio": "🧬 对 AI4Bio 感兴趣",
     "I love playing video games.": "我喜欢玩电子游戏。",
     "🎮 Love playing video games": "🎮 喜欢玩电子游戏",
