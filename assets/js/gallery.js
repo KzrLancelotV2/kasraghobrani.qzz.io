@@ -2,8 +2,6 @@
   const grid = document.getElementById("gallery-grid");
   const viewer = document.getElementById("photo-viewer");
   const full = document.getElementById("photo-full");
-  const title = document.getElementById("photo-title");
-  const caption = document.getElementById("photo-caption");
   viewer.querySelector("button").addEventListener("click", () => viewer.close());
   viewer.addEventListener("click", (event) => {
     if (event.target !== viewer) return;
@@ -40,29 +38,15 @@
         image.alt = photo.alt || photo.title;
         image.loading = "lazy";
         image.decoding = "async";
-        const info = document.createElement("figcaption");
-        const category = document.createElement("span");
-        category.className = "gallery-category";
-        category.textContent = photo.category || "Moments";
-        const heading = document.createElement("h2");
-        heading.textContent = photo.title;
-        info.append(category, heading);
-        if (photo.caption) {
-          const description = document.createElement("p");
-          description.textContent = photo.caption;
-          info.append(description);
-        }
         link.append(image);
-        card.append(link, info);
+        card.append(link);
         link.addEventListener("click", (event) => {
           if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey ||
               typeof viewer.showModal !== "function") return;
           event.preventDefault();
           full.src = url.href;
           full.alt = photo.alt || photo.title;
-          title.textContent = photo.title;
-          caption.textContent = photo.caption || "";
-          caption.hidden = !photo.caption;
+          viewer.setAttribute("aria-label", photo.title);
           window.siteI18n?.apply();
           viewer.showModal();
         });

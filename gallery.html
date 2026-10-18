@@ -10,7 +10,7 @@
     <script src="/assets/js/i18n.js?v=4501f01d8a6a" defer></script>
     <link rel="stylesheet" href="/assets/css/pepe.css?v=cyberpunk1">
     <script src="/assets/js/pepe.js?v=5a239a2194f5" defer></script>
-    <script src="/assets/js/gallery.js?v=e953f7a4e291" defer></script>
+    <script src="/assets/js/gallery.js?v=384796c884c4" defer></script>
     <link rel="stylesheet" href="/assets/css/i18n.css?v=1">
 </head>
 <body>
@@ -34,19 +34,46 @@
         </header>
         <div class="gallery-grid" id="gallery-grid">
             <figure class="gallery-card">
-                <a href="/images/profile.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open portrait of Kasra Ghobrani">
-                    <img src="/images/profile.jpg" alt="Portrait of Kasra Ghobrani">
+                <a href="/images/gallery/with-pepe.jpg" target="_blank" rel="noopener noreferrer" aria-label="Enlarge With Pepe">
+                    <img src="/images/gallery/with-pepe.jpg" alt="A photo beside a large green Pepe statue." loading="lazy">
                 </a>
-                <figcaption><span class="gallery-category">Portraits</span><h2>Kasra Ghobrani</h2></figcaption>
+            </figure>
+            <figure class="gallery-card">
+                <a href="/images/gallery/group-outdoors.jpg" target="_blank" rel="noopener noreferrer" aria-label="Enlarge Group photo">
+                    <img src="/images/gallery/group-outdoors.jpg" alt="A group posing outdoors beside a bamboo grove." loading="lazy">
+                </a>
+            </figure>
+            <figure class="gallery-card">
+                <a href="/images/gallery/at-a-show.jpg" target="_blank" rel="noopener noreferrer" aria-label="Enlarge At a show">
+                    <img src="/images/gallery/at-a-show.jpg" alt="Two people posing in front of a stage." loading="lazy">
+                </a>
+            </figure>
+            <figure class="gallery-card">
+                <a href="/images/gallery/with-a-piglet.jpg" target="_blank" rel="noopener noreferrer" aria-label="Enlarge With a piglet">
+                    <img src="/images/gallery/with-a-piglet.jpg" alt="Holding a small piglet indoors." loading="lazy">
+                </a>
+            </figure>
+            <figure class="gallery-card">
+                <a href="/images/gallery/a-selfie.jpg" target="_blank" rel="noopener noreferrer" aria-label="Enlarge A selfie">
+                    <img src="/images/gallery/a-selfie.jpg" alt="A selfie of two people indoors." loading="lazy">
+                </a>
+            </figure>
+            <figure class="gallery-card">
+                <a href="/images/gallery/book-browsing.jpg" target="_blank" rel="noopener noreferrer" aria-label="Enlarge Book browsing">
+                    <img src="/images/gallery/book-browsing.jpg" alt="Reading a book in front of bookshelves while wearing a Pepe T-shirt." loading="lazy">
+                </a>
+            </figure>
+            <figure class="gallery-card">
+                <a href="/images/profile.jpg" target="_blank" rel="noopener noreferrer" aria-label="Enlarge Kasra Ghobrani">
+                    <img src="/images/profile.jpg" alt="Portrait of Kasra Ghobrani" loading="lazy">
+                </a>
             </figure>
         </div>
         <p class="gallery-note">An archive in progress. More moments to come.</p>
     </main>
-    <dialog id="photo-viewer" aria-labelledby="photo-title">
+    <dialog id="photo-viewer" aria-label="Gallery">
         <button type="button" class="viewer-close" aria-label="Close photo">Close ×</button>
         <img id="photo-full" alt="">
-        <h2 id="photo-title"></h2>
-        <p id="photo-caption"></p>
     </dialog>
 </body>
 </html>
