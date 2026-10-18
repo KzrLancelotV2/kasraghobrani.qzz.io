@@ -42,7 +42,7 @@
         "Gallery unlocked. Proof that Kasra occasionally goes outside.",
         "I was behind the camera. Very difficult with frog hands.",
         "No graphs, no datasets. Just a few moments worth keeping.",
-        "Still waiting for my own portrait in this gallery.",
+        "Yes, that's me in the photo. I'm taller in person.",
         "Click a photo for a closer look. I will guard the archive."
 ],
 
