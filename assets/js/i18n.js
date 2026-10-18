@@ -1,6 +1,17 @@
 (() => {
   const zh = {
-    "Home": "首页", "About Me": "关于我", "Research": "科研经历", "Projects": "项目", "Publications": "学术论文", "Gallery": "相册", "Contact": "联系我", "Interests": "研究兴趣",
+    "Home": "首页", "About": "关于我", "About Me": "关于我", "Research": "科研", "Projects": "项目", "Publications": "学术论文", "Gallery": "相册", "Contact": "联系我", "Interests": "研究兴趣",
+    "Research projects": "研究项目", "Research experience": "科研经历",
+    "Papers on Google Scholar ↗": "在谷歌学术查看论文 ↗", "Code on GitHub ↗": "在 GitHub 查看代码 ↗",
+    "AI for life sciences": "面向生命科学的人工智能",
+    "Graph learning and efficient deep learning": "图学习与高效深度学习",
+    "Mitigating rumor propagation": "谣言传播抑制",
+    "Research on AI virtual cell models, gene regulatory network inference, perturbation response prediction, and active learning for experimental design.": "研究 AI 虚拟细胞模型、基因调控网络推断、扰动响应预测，以及用于实验设计的主动学习。",
+    "Research on machine learning, graph-structured data, optimization, and efficient training methods for deep learning models, including vision transformers.": "研究机器学习、图结构数据、优化方法，以及包括视觉 Transformer 在内的深度学习模型的高效训练方法。",
+    "Research on mitigating rumor propagation in directed social networks.": "研究有向社交网络中的谣言传播抑制问题。",
+    "Supervisor: Prof. Stan Z. Li": "指导教师：Stan Z. Li 教授",
+    "Supervisor: Dr. Ahmad Kalhor": "指导教师：Ahmad Kalhor 博士",
+    "Supervisor: Prof. Tao Zhou": "指导教师：Tao Zhou 教授",
     "Google Scholar": "谷歌学术", "LinkedIn": "领英", "University Email": "学校邮箱", "Personal Email": "个人邮箱", "WeChat": "微信",
     "Computer Science undergraduate at the University of Tehran": "德黑兰大学计算机科学本科生",
     "I am interested in Artificial Intelligence, Machine Learning, AI for Biology, Computational Biology, Gene Regulatory Networks, Network Science, Economics, and Finance.": "我的兴趣包括人工智能、机器学习、生物学中的人工智能应用、计算生物学、基因调控网络、网络科学、经济学与金融。",
