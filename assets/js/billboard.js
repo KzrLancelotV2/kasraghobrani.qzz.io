@@ -18,23 +18,29 @@
   const letters = board.querySelector('.board-letters');
   const face = board.querySelector('.board-emoticon');
   const message = board.querySelector('.board-message');
+  const readable = board.querySelector('.board-sr-only');
   const language = board.querySelector('.board-language');
   const toggle = board.querySelector('[data-board="toggle"]');
   const previous = board.querySelector('[data-board="previous"]');
   const next = board.querySelector('[data-board="next"]');
   const motion = matchMedia('(prefers-reduced-motion: reduce)');
   let index = window.siteI18n?.language === 'zh' ? 1 : 0;
-  // Reading comes first. Visitors can opt into a slow, whole-line rotation.
-  let paused = true;
+  const segmenter = typeof Intl.Segmenter === 'function' ? new Intl.Segmenter(undefined, { granularity: 'grapheme' }) : null;
+  let paused = motion.matches;
   let timer;
-  function show() {
+  function schedule(callback, delay) {
+    clearTimeout(timer);
+    if (!paused && !document.hidden) timer = setTimeout(callback, delay);
+  }
+  function show(animate = true) {
     clearTimeout(timer);
     const current = greetings[index];
     const chinese = window.siteI18n?.language === 'zh';
     message.lang = current.lang;
     message.dir = current.dir;
-    letters.textContent = current.text;
+    readable.textContent = current.text;
     face.textContent = current.face;
+    face.style.visibility = 'visible';
     language.textContent = current.label;
     language.lang = current.lang;
     board.setAttribute('aria-label', chinese ? '多语言问候' : 'Multilingual greetings');
@@ -43,15 +49,29 @@
     toggle.textContent = paused ? (chinese ? '播放' : 'Play') : (chinese ? '暂停' : 'Pause');
     toggle.setAttribute('aria-label', paused ? (chinese ? '播放问候动画' : 'Play greetings') : (chinese ? '暂停问候动画' : 'Pause greetings'));
     board.dataset.paused = String(paused);
-    if (!paused && !document.hidden) timer = setTimeout(() => step(1), 10000);
+    if (!animate || paused || motion.matches || !segmenter) {
+      letters.textContent = current.text;
+      schedule(() => step(1), 2300);
+      return;
+    }
+    const characters = Array.from(segmenter.segment(current.text), (part) => part.segment);
+    letters.textContent = '';
+    face.style.visibility = 'hidden';
+    let count = 0;
+    function type() {
+      letters.textContent = characters.slice(0, ++count).join('');
+      if (count < characters.length) schedule(type, 45);
+      else { face.style.visibility = 'visible'; schedule(() => step(1), 1800); }
+    }
+    type();
   }
   function step(delta) { index = (index + delta + greetings.length) % greetings.length; show(); }
   toggle.hidden = previous.hidden = next.hidden = false;
-  toggle.addEventListener('click', () => { paused = !paused; show(); });
+  toggle.addEventListener('click', () => { paused = !paused; face.style.visibility = 'visible'; show(false); });
   previous.addEventListener('click', () => step(-1));
   next.addEventListener('click', () => step(1));
   document.addEventListener('visibilitychange', () => { if (document.hidden) clearTimeout(timer); else show(); });
-  motion.addEventListener('change', () => { if (motion.matches) paused = true; show(); });
+  motion.addEventListener('change', () => { if (motion.matches) paused = true; face.style.visibility = 'visible'; show(false); });
   window.addEventListener('languagechange', () => { index = window.siteI18n?.language === 'zh' ? 1 : 0; show(); });
   show();
 })();
