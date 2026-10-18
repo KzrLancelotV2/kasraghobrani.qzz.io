@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="/assets/css/pepe.css?v=cyberpunk1">
     <link rel="stylesheet" href="/assets/css/i18n.css?v=1">
     <script src="/assets/js/i18n.js?v=9" defer></script>
+    <link rel="stylesheet" href="/assets/css/billboard.css?v=2">
+    <script src="/assets/js/billboard.js?v=2" defer></script>
 </head>
 
 <body>
@@ -27,7 +29,23 @@
 </nav>
 
 <main>
-<h1>About Me</h1>
+<header class="about-heading">
+    <h1>About Me</h1>
+    <aside class="greeting-board" aria-label="Multilingual greetings" data-no-translate data-paused="true">
+        <p class="board-message" lang="en" dir="ltr" aria-live="off">
+            <span class="board-letters">Hi, I'm Kasra!</span>
+            <bdi class="board-emoticon" dir="ltr" aria-hidden="true">(＾◡＾)っ</bdi>
+        </p>
+        <div class="board-controls">
+            <span class="board-language" lang="en">English</span>
+            <div class="board-buttons">
+                <button type="button" data-board="previous" aria-label="Previous greeting" hidden>←</button>
+                <button type="button" data-board="toggle" aria-label="Play greetings" hidden>Play</button>
+                <button type="button" data-board="next" aria-label="Next greeting" hidden>→</button>
+            </div>
+        </div>
+    </aside>
+</header>
 
 <p>
 I am a Computer Engineering undergraduate at the University of Tehran. Born in December 2003, I graduated from Mofid High School before beginning my studies in computer engineering.
