@@ -23,3 +23,10 @@ publish them. Visitors can click photos to enlarge them and press Escape to clos
 This is a public gallery managed through the repository, without a visitor upload
 form. The initial entry reuses the existing profile photo and may be removed when
 you add your own selection.
+
+## Chinese captions
+
+Optional `title_zh`, `alt_zh`, `category_zh`, and `caption_zh` fields supply Chinese
+versions of each photo's text. The 中文 / Eng switch uses these translations;
+when a translation is missing, the original text stays visible. For example,
+pair `"caption": "A day by the lake"` with `"caption_zh": "湖畔的一天"`.

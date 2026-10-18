@@ -82,7 +82,8 @@
     function getRandomDialogue(pageKey) {
       const pageDialogues = dialogues[pageKey] || dialogues.default;
       const storageKey = "pepe-last-dialogue-" + pageKey;
-      const lastDialogue = localStorage.getItem(storageKey);
+      let lastDialogue = null;
+      try { lastDialogue = localStorage.getItem(storageKey); } catch (_) {}
 
       let options = pageDialogues.filter(line => line !== lastDialogue);
 
@@ -91,7 +92,7 @@
       }
 
       const chosen = options[Math.floor(Math.random() * options.length)];
-      localStorage.setItem(storageKey, chosen);
+      try { localStorage.setItem(storageKey, chosen); } catch (_) {}
 
       return chosen;
     }
@@ -110,10 +111,14 @@
     container.appendChild(bubble);
     container.appendChild(pepe);
     document.body.appendChild(container);
+    window.siteI18n?.apply();
 
     let typingTimer = null;
 
+    let currentLine = "";
     function typeDialogue(text) {
+      currentLine = text;
+      text = window.siteI18n?.t(text) || text;
       if (typingTimer) {
         clearInterval(typingTimer);
       }
@@ -140,6 +145,9 @@
       typeDialogue(line);
     }
 
+    window.addEventListener("languagechange", () => {
+      if (currentLine) typeDialogue(currentLine);
+    });
     setTimeout(speakForCurrentPage, 700);
     pepe.addEventListener("click", speakForCurrentPage);
   }

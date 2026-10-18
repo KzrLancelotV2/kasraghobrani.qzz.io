@@ -20,6 +20,9 @@
     .then((photos) => {
       if (!Array.isArray(photos) || !photos.length) return;
       const cards = photos.map((photo) => {
+        for (const field of ["title", "alt", "category", "caption"]) {
+          window.siteI18n?.register(photo[field], photo[field + "_zh"]);
+        }
         // Photos are repository assets; reject unexpected URL schemes or external hosts.
         const url = new URL(photo.src, location.origin);
         if (url.origin !== location.origin || !url.pathname.startsWith("/images/")) {
@@ -60,11 +63,13 @@
           title.textContent = photo.title;
           caption.textContent = photo.caption || "";
           caption.hidden = !photo.caption;
+          window.siteI18n?.apply();
           viewer.showModal();
         });
         return card;
       });
       grid.replaceChildren(...cards);
+      window.siteI18n?.apply();
     })
     .catch(() => { /* Keep the static portrait available if the archive cannot load. */ });
 })();
