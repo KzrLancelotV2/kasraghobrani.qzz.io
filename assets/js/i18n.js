@@ -47,7 +47,7 @@
     "Research Interests": "研究兴趣", "Artificial Intelligence": "人工智能", "AI for Biology and Life Sciences": "面向生物学与生命科学的人工智能", "Economics and Finance": "经济学与金融",
     "Projects will be added here.": "项目内容将陆续更新。", "Publications will be added here.": "学术论文将陆续更新。",
     "Feel free to reach out regarding research, collaborations, academic opportunities, or interesting projects.": "欢迎就科研合作、学术机会或有趣的项目与我联系。",
-    "THE PERSONAL ARCHIVE": "个人影像档案", "Life beyond the research.": "科研之外的生活。", "A collection of photos, places, and moments along the way.": "用照片记录沿途的风景与生活中的点滴。", "An archive in progress. More moments to come.": "相册还在整理中，更多瞬间将陆续加入。",
+    "THE PERSONAL ARCHIVE": "个人影像档案", "Photos from trips and everyday life.": "旅行和日常生活中的照片。", "An archive in progress. More moments to come.": "相册还在整理中，更多瞬间将陆续加入。",
     "Portraits": "人物", "Moments": "生活瞬间", "Travel": "旅行", "Everyday": "日常", "Close ×": "关闭 ×", "Close photo": "关闭照片", "Main navigation": "主导航", "Portrait of Kasra Ghobrani": "Kasra Ghobrani 的照片", "Open portrait of Kasra Ghobrani": "查看 Kasra Ghobrani 的照片", "Photos, places, and moments from Kasra Ghobrani's life.": "Kasra Ghobrani 的生活照片、旅行足迹与点滴瞬间。",
     "Westlake University": "西湖大学", "University of Tehran": "德黑兰大学", "UESTC": "电子科技大学", "Pepe assistant": "Pepe 小助手",
     "Welcome to Kasra's research swamp.": "欢迎来到 Kasra 的科研沼泽。",
