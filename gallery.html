@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Photos, places, and moments from Kasra Ghobrani's life.">
+    <title>Gallery | Kasra Ghobrani</title>
+    <link rel="stylesheet" href="/style.css?v=cyberpunk1">
+    <link rel="stylesheet" href="/assets/css/gallery.css?v=1">
+    <script src="/assets/js/gallery.js?v=1" defer></script>
+</head>
+<body>
+    <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="research.html">Research</a>
+        <a href="projects.html">Projects</a>
+        <a href="publications.html">Publications</a>
+        <a href="gallery.html" aria-current="page">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <main class="gallery-page">
+        <header class="gallery-heading">
+            <p class="gallery-eyebrow">THE PERSONAL ARCHIVE</p>
+            <h1>Life beyond the research.</h1>
+            <p class="subtitle">A collection of photos, places, and moments along the way.</p>
+        </header>
+        <div class="gallery-grid" id="gallery-grid">
+            <figure class="gallery-card">
+                <a href="/images/profile.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open portrait of Kasra Ghobrani">
+                    <img src="/images/profile.jpg" alt="Portrait of Kasra Ghobrani">
+                </a>
+                <figcaption><span class="gallery-category">Portraits</span><h2>Kasra Ghobrani</h2></figcaption>
+            </figure>
+        </div>
+        <p class="gallery-note">An archive in progress. More moments to come.</p>
+    </main>
+    <dialog id="photo-viewer" aria-labelledby="photo-title">
+        <button type="button" class="viewer-close" aria-label="Close photo">Close ×</button>
+        <img id="photo-full" alt="">
+        <h2 id="photo-title"></h2>
+        <p id="photo-caption"></p>
+    </dialog>
+</body>
+</html>
