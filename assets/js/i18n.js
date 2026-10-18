@@ -1,5 +1,6 @@
 (() => {
   const zh = {
+    "Research Intern": "科研实习生",
     "Beta Lab": "Beta 实验室",
     "Gallery unlocked. Proof that Kasra occasionally goes outside.": "相册已解锁。看来 Kasra 偶尔也会出门。",
     "I was behind the camera. Very difficult with frog hands.": "照片是我拍的。用青蛙的手拍照可不容易。",

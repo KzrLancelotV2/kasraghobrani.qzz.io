@@ -12,7 +12,7 @@
         event.clientY < bounds.top || event.clientY > bounds.bottom) viewer.close();
   });
 
-  fetch("/assets/data/gallery.json")
+  fetch("/assets/data/gallery.json?v=586bf631d088")
     .then((response) => {
       if (!response.ok) throw new Error("Gallery unavailable");
       return response.json();

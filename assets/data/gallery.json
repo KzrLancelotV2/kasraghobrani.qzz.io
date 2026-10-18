@@ -1,5 +1,65 @@
 [
   {
+    "src": "/images/gallery/with-pepe.jpg",
+    "title": "With Pepe",
+    "title_zh": "和 Pepe 合影",
+    "alt": "A photo beside a large green Pepe statue.",
+    "alt_zh": "与大型绿色 Pepe 雕像的合影。",
+    "category": "Moments",
+    "category_zh": "生活瞬间",
+    "caption": ""
+  },
+  {
+    "src": "/images/gallery/group-outdoors.jpg",
+    "title": "Group photo",
+    "title_zh": "集体合影",
+    "alt": "A group posing outdoors beside a bamboo grove.",
+    "alt_zh": "一群人在竹林旁的户外合影。",
+    "category": "Moments",
+    "category_zh": "生活瞬间",
+    "caption": ""
+  },
+  {
+    "src": "/images/gallery/at-a-show.jpg",
+    "title": "At a show",
+    "title_zh": "演出现场",
+    "alt": "Two people posing in front of a stage.",
+    "alt_zh": "两个人在舞台前合影。",
+    "category": "Moments",
+    "category_zh": "生活瞬间",
+    "caption": ""
+  },
+  {
+    "src": "/images/gallery/with-a-piglet.jpg",
+    "title": "With a piglet",
+    "title_zh": "和小猪合影",
+    "alt": "Holding a small piglet indoors.",
+    "alt_zh": "在室内抱着一只小猪。",
+    "category": "Moments",
+    "category_zh": "生活瞬间",
+    "caption": ""
+  },
+  {
+    "src": "/images/gallery/a-selfie.jpg",
+    "title": "A selfie",
+    "title_zh": "自拍合影",
+    "alt": "A selfie of two people indoors.",
+    "alt_zh": "两个人在室内自拍合影。",
+    "category": "Moments",
+    "category_zh": "生活瞬间",
+    "caption": ""
+  },
+  {
+    "src": "/images/gallery/book-browsing.jpg",
+    "title": "Book browsing",
+    "title_zh": "翻书时刻",
+    "alt": "Reading a book in front of bookshelves while wearing a Pepe T-shirt.",
+    "alt_zh": "穿着 Pepe T 恤，在书架前读书。",
+    "category": "Moments",
+    "category_zh": "生活瞬间",
+    "caption": ""
+  },
+  {
     "src": "/images/profile.jpg",
     "alt": "Portrait of Kasra Ghobrani",
     "title": "Kasra Ghobrani",
