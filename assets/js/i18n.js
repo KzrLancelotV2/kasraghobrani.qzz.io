@@ -1,6 +1,6 @@
 (() => {
   const zh = {
-    "🧬 AI4Bio: helping people live healthier, better, longer lives": "🧬 AI4Bio：帮助人们活得更健康、更好、更长久",
+    "🧬 Interested in AI4Bio": "🧬 对 AI4Bio 感兴趣",
     "I love playing video games.": "我喜欢玩电子游戏。",
     "🎮 Love playing video games": "🎮 喜欢玩电子游戏",
     "Home": "首页", "About": "关于我", "About Me": "关于我", "Research": "科研", "Projects": "项目", "Publications": "学术论文", "Gallery": "相册", "Contact": "联系我", "Interests": "研究兴趣",
