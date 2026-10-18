@@ -22,7 +22,7 @@
     "Supervisor: Dr. Ahmad Kalhor": "指导教师：Ahmad Kalhor 博士",
     "Supervisor: Prof. Tao Zhou": "指导教师：Tao Zhou 教授",
     "Google Scholar": "谷歌学术", "LinkedIn": "领英", "University Email": "学校邮箱", "Personal Email": "个人邮箱", "WeChat": "微信",
-    "Computer Science undergraduate at the University of Tehran": "德黑兰大学计算机科学本科生",
+    "Computer Engineering undergraduate at the University of Tehran": "德黑兰大学计算机工程本科生",
     "I am interested in Artificial Intelligence, Machine Learning, AI for Biology, Computational Biology, Gene Regulatory Networks, Network Science, Economics, and Finance.": "我的兴趣包括人工智能、机器学习、生物学中的人工智能应用、计算生物学、基因调控网络、网络科学、经济学与金融。",
     "I am a Computer Engineering undergraduate at the University of Tehran. Born in December 2003, I graduated from Mofid High School before beginning my studies in computer engineering.": "我是德黑兰大学计算机工程专业的本科生，出生于2003年12月。我毕业于 Mofid 高中，随后开始学习计算机工程。",
     "With the current AI boom and the prospect of artificial general intelligence (AGI), I think AI for biology could be the next big wave. What matters to me is where that takes us: helping people live healthier, better, and longer lives. I want to be part of making that happen.": "随着当前人工智能的快速发展，以及通用人工智能（AGI）带来的前景，我认为面向生物学的人工智能可能成为下一波浪潮。对我来说，最重要的是这些进步最终能带来什么：让人们活得更健康、更好、更长久。我希望参与其中，让这一目标成为现实。",
@@ -47,7 +47,7 @@
     "Research Interests": "研究兴趣", "Artificial Intelligence": "人工智能", "AI for Biology and Life Sciences": "面向生物学与生命科学的人工智能", "Economics and Finance": "经济学与金融",
     "Projects will be added here.": "项目内容将陆续更新。", "Publications will be added here.": "学术论文将陆续更新。",
     "Feel free to reach out regarding research, collaborations, academic opportunities, or interesting projects.": "欢迎就科研合作、学术机会或有趣的项目与我联系。",
-    "THE PERSONAL ARCHIVE": "个人影像档案", "Life beyond the research.": "科研之外的生活。", "A collection of photos, places, and moments along the way.": "用照片记录沿途的风景与生活中的点滴。", "An archive in progress. More moments to come.": "相册持续更新中，更多精彩瞬间即将呈现。",
+    "THE PERSONAL ARCHIVE": "个人影像档案", "Life beyond the research.": "科研之外的生活。", "A collection of photos, places, and moments along the way.": "用照片记录沿途的风景与生活中的点滴。", "An archive in progress. More moments to come.": "相册还在整理中，更多瞬间将陆续加入。",
     "Portraits": "人物", "Moments": "生活瞬间", "Travel": "旅行", "Everyday": "日常", "Close ×": "关闭 ×", "Close photo": "关闭照片", "Main navigation": "主导航", "Portrait of Kasra Ghobrani": "Kasra Ghobrani 的照片", "Open portrait of Kasra Ghobrani": "查看 Kasra Ghobrani 的照片", "Photos, places, and moments from Kasra Ghobrani's life.": "Kasra Ghobrani 的生活照片、旅行足迹与点滴瞬间。",
     "Westlake University": "西湖大学", "University of Tehran": "德黑兰大学", "UESTC": "电子科技大学", "Pepe assistant": "Pepe 小助手",
     "Welcome to Kasra's research swamp.": "欢迎来到 Kasra 的科研沼泽。",
@@ -66,13 +66,13 @@
     "No pressure, but Nature is waiting.": "别有压力，不过《自然》还在等着呢。",
     "This page may look empty now. That is called potential.": "这个页面现在有点空，这叫潜力。",
     "Publications soon. Citations later. Glory eventually.": "先有论文，再有引用，最后走向辉煌。",
-    "Projects page. This is where the real suffering lives.": "项目页面，真正的挑战从这里开始。",
+    "Projects page. This is where the real suffering lives.": "项目页面，真正的痛苦就在这里。",
     "Graphs, models, datasets... classic research pain.": "图、模型、数据集……经典科研套餐。",
     "Every project starts as curiosity and ends as debugging.": "每个项目都始于好奇，终于调试。",
     "Pepe predicts 3 bugs and 1 breakthrough.": "Pepe 预测：三个 bug，一个突破。",
     "Need to contact Kasra? Choose your weapon: email, GitHub, LinkedIn.": "想联系 Kasra？邮箱、GitHub、领英，任你选择。",
     "Professional networking swamp entrance.": "学术交流沼泽入口。",
-    "Recruiters, professors, collaborators: proceed carefully.": "招聘者、教授、合作伙伴们：欢迎探索。",
+    "Recruiters, professors, collaborators: proceed carefully.": "招聘者、教授、合作伙伴们：请谨慎前行。",
     "Pepe is not responsible for unread emails.": "Pepe 不对未读邮件负责。",
     "Pepe has entered the page.": "Pepe 已进入页面。",
     "This page is also part of the swamp.": "这个页面也是沼泽的一部分。",
@@ -91,7 +91,7 @@
     if (language === "en") return text;
     const key = normalize(text);
     if (zh[key]) return zh[key];
-    if (key.startsWith("Enlarge ")) return "放大查看：" + key.slice(8);
+    if (key.startsWith("Enlarge ")) return "放大查看：" + t(key.slice(8));
     if (key.includes(" | ")) return key.split(" | ").map(t).join(" | ");
     return text;
   }

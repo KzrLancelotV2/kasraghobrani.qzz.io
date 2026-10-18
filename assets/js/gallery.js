@@ -59,7 +59,7 @@
               typeof viewer.showModal !== "function") return;
           event.preventDefault();
           full.src = url.href;
-          full.alt = image.alt;
+          full.alt = photo.alt || photo.title;
           title.textContent = photo.title;
           caption.textContent = photo.caption || "";
           caption.hidden = !photo.caption;
