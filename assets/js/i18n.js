@@ -1,5 +1,6 @@
 (() => {
   const zh = {
+    "Kasra holding a piglet": "Kasra 抱着一只小猪",
     "Research Intern": "科研实习生",
     "Beta Lab": "Beta 实验室",
     "Gallery unlocked. Proof that Kasra occasionally goes outside.": "相册已解锁。看来 Kasra 偶尔也会出门。",

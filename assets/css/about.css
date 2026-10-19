@@ -1,0 +1,17 @@
+.about-bio { display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 34px; align-items: start; margin: 24px 0 36px; }
+.about-copy { grid-column: 1; grid-row: 1; min-width: 0; }
+.about-copy p:first-child { margin-top: 0; }
+.about-copy p:last-child { margin-bottom: 0; }
+.about-photo { grid-column: 2; grid-row: 1; margin: 0; padding: 6px; border: 1px solid rgba(0,245,255,.3); border-radius: 18px; background: rgba(255,255,255,.03); box-shadow: 0 12px 30px rgba(0,0,0,.22); }
+.about-photo img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 57% center; border-radius: 12px; }
+@media (max-width: 800px) {
+  .about-bio { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  .about-photo { grid-column: 1; grid-row: 1; width: min(100%, 380px); box-sizing: border-box; justify-self: center; }
+  .about-photo img { aspect-ratio: 4 / 3; object-fit: contain; }
+  .about-copy { grid-column: 1; grid-row: 2; }
+}
+@media (max-width: 700px) {
+  .about-page ~ #pepe-container { right: 10px !important; bottom: 10px !important; }
+  .about-page ~ #pepe-container #pepe-mascot { width: 90px !important; }
+  .about-page ~ #pepe-container #pepe-bubble { max-width: 180px !important; font-size: 13px !important; padding: 8px 10px !important; }
+}
