@@ -2,7 +2,7 @@
 #pepe-container button { font: 13px/1.4 'Share Tech Mono', 'Microsoft YaHei', system-ui, sans-serif; color: #d9edf0; cursor: pointer; pointer-events: auto; }
 #pepe-container button:focus-visible { outline: 2px solid #00f5ff; outline-offset: 4px; }
 #pepe-chat { display: flex; flex-direction: column; align-items: center; padding: 0; border: 0; border-radius: 12px; background: transparent; }
-#pepe-mascot { display: block; width: 145px; height: auto; user-select: none; transform-origin: center bottom; filter: drop-shadow(0 0 6px #00f5ff66); transition: filter .2s; }
+#pepe-mascot { display: block; width: 245px; height: auto; user-select: none; transform-origin: center bottom; filter: drop-shadow(0 0 6px #00f5ff66); transition: filter .2s; }
 #pepe-chat:hover #pepe-mascot { filter: drop-shadow(0 0 10px #00f5ff99); }
 #pepe-hint { border: 1px solid #00f5ff55; border-radius: 20px; padding: 5px 12px; background: #0a1020ee; }
 #pepe-mute { min-height: 32px; padding: 4px 12px; margin-right: 12px; border: 0; border-radius: 8px; background: #0a1020e6; color: #a7b8c9 !important; }
