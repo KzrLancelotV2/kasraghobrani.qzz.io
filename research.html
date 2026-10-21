@@ -8,9 +8,8 @@
     <link rel="stylesheet" href="/style.css?v=research1">
     <link rel="stylesheet" href="/assets/css/pepe.css?v=aa2d1a981e57">
     <link rel="stylesheet" href="/assets/css/i18n.css?v=11c1675c72ef">
-    <script src="/assets/js/i18n.js?v=1475cd0c5161" defer></script>
-    <link rel="stylesheet" href="/assets/css/research.css?v=035b991cc707">
-    <script src="/assets/js/research.js?v=720c68ca015e" defer></script>
+    <script src="/assets/js/i18n.js?v=d12d4073a846" defer></script>
+    <link rel="stylesheet" href="/assets/css/research.css?v=1">
 </head>
 
 <body>
@@ -40,71 +39,24 @@
         </div>
 
         <section class="research-section" aria-labelledby="projects-heading">
-            <div class="research-section-heading"><h2 id="projects-heading">Research projects</h2><a href="#experience-heading">Jump to experience ↓</a></div>
-            <div class="research-filters" role="group" aria-label="Filter projects" hidden>
-                <button type="button" data-filter="all" aria-pressed="true">All projects</button>
-                <button type="button" data-filter="bio" aria-pressed="false">AI4Bio</button>
-                <button type="button" data-filter="ml" aria-pressed="false">Machine learning</button>
-                <button type="button" data-filter="networks" aria-pressed="false">Networks</button>
-            </div>
-            <p id="research-results" class="research-status" role="status" data-no-translate></p>
-            <article class="work-card featured-work" id="ai-for-life-sciences" data-topics="bio ml">
-                <div class="work-meta"><span class="work-context">Westlake University</span><span class="work-status">arXiv preprint · 2026</span></div>
-                <h3>Bison</h3>
-                <p class="paper-title">Cross-Dataset Learning for Unseen-Compound Perturbation Prediction</p>
-                <p>Can learning across different datasets help predict how cells respond to a new compound?</p>
-                <p class="research-role">Role: Co-author</p>
-                <div class="work-actions"><a class="paper-link" href="https://arxiv.org/abs/2609.32467" target="_blank" rel="noopener noreferrer">Read on arXiv ↗</a><a href="https://arxiv.org/pdf/2609.32467" target="_blank" rel="noopener noreferrer">PDF ↗</a></div>
-                <details class="project-details" open><summary>Explore the idea</summary>
-                    <div class="project-detail-body">
-                        <div class="project-facts"><span><strong>8</strong>datasets</span><span><strong>16,771</strong>compounds in the benchmark</span></div>
-                        <div class="bison-controls" role="group" aria-label="Bison walkthrough" hidden>
-                            <button type="button" data-bison-step="datasets" aria-controls="bison-datasets" aria-pressed="true">01 · Datasets</button>
-                            <button type="button" data-bison-step="shared" aria-controls="bison-shared" aria-pressed="false">02 · Shared learning</button>
-                            <button type="button" data-bison-step="prediction" aria-controls="bison-prediction" aria-pressed="false">03 · Prediction</button>
-                        </div>
-                        <section class="bison-panel" id="bison-datasets" aria-labelledby="bison-datasets-heading">
-<div class="dataset-tiles" aria-hidden="true"><span>01</span><span>02</span><span>03</span><span>04</span><span>05</span><span>06</span><span>07</span><span>08</span></div><h4 id="bison-datasets-heading">Different measurements, complementary coverage</h4><p>Eight datasets provide complementary chemical coverage, with different experimental platforms and gene panels.</p></section>
-                        <section class="bison-panel" id="bison-shared" aria-labelledby="bison-shared-heading">
-<div class="method-flow"><span>Gene panels</span><b aria-hidden="true">→</b><span>Shared representation</span></div><h4 id="bison-shared-heading">Connect the gene panels</h4><p>A shared gene representation connects the native panels. Two discrete diffusion models combine context-dependent responses with drug-specific deviations.</p></section>
-                        <section class="bison-panel" id="bison-prediction" aria-labelledby="bison-prediction-heading">
-<div class="method-flow"><span>New compound</span><b aria-hidden="true">→</b><span>Predicted response</span></div><h4 id="bison-prediction-heading">Test on unseen compounds</h4><p>Test compounds are withheld from every training dataset. Evaluation considers both overall responses and differences between drugs.</p></section>
-                        <p class="diagram-note">Method overview; this diagram does not run the model.</p>
-                    </div>
-                </details>
+            <h2 id="projects-heading">Research projects</h2>
+            <article class="work-card" id="ai-for-life-sciences">
+                <span class="work-context">Westlake University</span>
+                <h3>AI for life sciences</h3>
+                <p>Research on AI virtual cell models, gene regulatory network inference, perturbation response prediction, and active learning for experimental design.</p>
+                <div class="tag-row"><span>Computational Biology</span><span>Gene Regulatory Networks</span><span>Perturb-seq</span><span>Active Learning</span></div>
             </article>
-            <article class="work-card" id="efficient-deep-learning" data-topics="ml">
+            <article class="work-card" id="efficient-deep-learning">
                 <span class="work-context">University of Tehran</span>
                 <h3>Graph learning and efficient deep learning</h3>
                 <p>Research on machine learning, graph-structured data, optimization, and efficient training methods for deep learning models, including vision transformers.</p>
                 <div class="tag-row"><span>Graph Learning</span><span>Optimization</span><span>Vision Transformers</span></div>
-                <details class="project-details"><summary>Explore the research focus</summary><div class="project-detail-body">
-                    <p>How can model structure and optimization make learning more efficient?</p>
-                    <div class="focus-grid"><div><h4>Graph Learning</h4><p>Learning from relationships in graph-structured data.</p></div><div><h4>Optimization</h4><p>Studying how deep learning models are trained.</p></div><div><h4>Vision Transformers</h4><p>Exploring efficient training methods for visual models.</p></div></div>
-                    <p class="research-role">Research Assistant</p>
-                </div></details>
             </article>
-            <article class="work-card" id="rumor-mitigation" data-topics="networks">
+            <article class="work-card" id="rumor-mitigation">
                 <span class="work-context">UESTC</span>
-                <h3>HMI · Rumor mitigation</h3>
+                <h3>Mitigating rumor propagation</h3>
                 <p>Research on mitigating rumor propagation in directed social networks.</p>
                 <div class="tag-row"><span>Rumor Propagation</span><span>Directed Graphs</span><span>Network Science</span></div>
-                <details class="project-details"><summary>Explore audience overlap</summary><div class="project-detail-body">
-                    <p>Two well-connected users may reach many of the same people. Try different pairs to see how overlap changes their combined audience.</p>
-                    <p class="diagram-note">Illustrative network only; not an HMI experiment or implementation.</p>
-                    <div id="coverage-example" hidden>
-                        <p>Choose up to two starting nodes.</p>
-                        <div class="coverage-controls" role="group" aria-label="Starting nodes">
-                            <button type="button" data-source="A" aria-pressed="true">A</button>
-                            <button type="button" data-source="B" aria-pressed="false">B</button>
-                            <button type="button" data-source="C" aria-pressed="false">C</button>
-                            <button type="button" id="coverage-reset">Reset</button>
-                        </div>
-                        <svg class="coverage-graph" viewBox="0 0 600 220" aria-hidden="true" focusable="false"><defs><marker id="coverage-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"/></marker></defs><line data-edge="A" x1="100" y1="62" x2="60" y2="160" marker-end="url(#coverage-arrow)"/><line data-edge="A" x1="100" y1="62" x2="156" y2="160" marker-end="url(#coverage-arrow)"/><line data-edge="A" x1="100" y1="62" x2="252" y2="160" marker-end="url(#coverage-arrow)"/><line data-edge="B" x1="300" y1="62" x2="156" y2="160" marker-end="url(#coverage-arrow)"/><line data-edge="B" x1="300" y1="62" x2="252" y2="160" marker-end="url(#coverage-arrow)"/><line data-edge="B" x1="300" y1="62" x2="348" y2="160" marker-end="url(#coverage-arrow)"/><line data-edge="C" x1="500" y1="62" x2="348" y2="160" marker-end="url(#coverage-arrow)"/><line data-edge="C" x1="500" y1="62" x2="444" y2="160" marker-end="url(#coverage-arrow)"/><line data-edge="C" x1="500" y1="62" x2="540" y2="160" marker-end="url(#coverage-arrow)"/><g data-start="A"><circle cx="100" cy="40" r="22"/><text x="100" y="46">A</text></g><g data-start="B"><circle cx="300" cy="40" r="22"/><text x="300" y="46">B</text></g><g data-start="C"><circle cx="500" cy="40" r="22"/><text x="500" y="46">C</text></g><g data-audience="1"><circle cx="60" cy="184" r="22"/><text x="60" y="190">1</text></g><g data-audience="2"><circle cx="156" cy="184" r="22"/><text x="156" y="190">2</text></g><g data-audience="3"><circle cx="252" cy="184" r="22"/><text x="252" y="190">3</text></g><g data-audience="4"><circle cx="348" cy="184" r="22"/><text x="348" y="190">4</text></g><g data-audience="5"><circle cx="444" cy="184" r="22"/><text x="444" y="190">5</text></g><g data-audience="6"><circle cx="540" cy="184" r="22"/><text x="540" y="190">6</text></g></svg>
-                        <output id="coverage-result" aria-live="polite" data-no-translate></output>
-                    </div>
-                    <noscript><p>Example: A and B reach four distinct people; A and C reach six.</p></noscript>
-                </div></details>
             </article>
         </section>
 
