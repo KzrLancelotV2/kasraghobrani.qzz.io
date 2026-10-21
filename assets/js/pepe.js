@@ -254,7 +254,7 @@
       path.includes("contact") ? "contact" : path.includes("interest") ? "interests" :
       path === "/" || /index|home/.test(path) ? "home" : "default";
     let muted = read("pepe-muted") === "true";
-    let currentLine = null, interacted = false, hideTimer, reactionTimer;
+    let currentLine = null, interacted = false, hideTimer, reactionTimer, typingTimer;
     let lastSpoke = 0, automaticReactionUsed = false, currentContext = null;
     let bag = [];
     const seenContexts = new Set();
@@ -263,7 +263,8 @@
     container.dataset.noTranslate = "";
     container.innerHTML = `
       <div id="pepe-bubble" hidden>
-        <p id="pepe-message" role="status" aria-live="polite" aria-atomic="true"></p>
+        <p id="pepe-message" aria-hidden="true"></p>
+        <span id="pepe-announcement" role="status" aria-live="polite" aria-atomic="true"></span>
         <button type="button" id="pepe-dismiss">×</button>
       </div>
       <button type="button" id="pepe-chat" aria-controls="pepe-bubble" aria-expanded="false">
@@ -274,6 +275,7 @@
     document.body.append(container);
     const bubble = container.querySelector("#pepe-bubble");
     const message = container.querySelector("#pepe-message");
+    const announcement = container.querySelector("#pepe-announcement");
     const chat = container.querySelector("#pepe-chat");
     const hint = container.querySelector("#pepe-hint");
     const mute = container.querySelector("#pepe-mute");
@@ -287,12 +289,13 @@
       mute.setAttribute("aria-label", translated(["Mute Pepe", "将 Pepe 静音"]));
       mute.setAttribute("aria-pressed", String(muted));
       dismiss.setAttribute("aria-label", translated(["Dismiss message", "关闭消息"]));
-      if (currentLine && !bubble.hidden) message.textContent = translated(currentLine);
     }
     function close() {
       clearTimeout(hideTimer);
+      clearTimeout(typingTimer);
       bubble.hidden = true;
       message.textContent = "";
+      announcement.textContent = "";
       chat.setAttribute("aria-expanded", "false");
       container.classList.remove("pepe-react");
     }
@@ -303,21 +306,41 @@
         else close();
       }, 12000);
     }
+    function typeCurrentLine() {
+      clearTimeout(typingTimer);
+      clearTimeout(hideTimer);
+      const text = translated(currentLine);
+      const characters = Array.from(text);
+      let index = 0;
+      message.textContent = "";
+      // Announce the complete line once, rather than every typed character.
+      announcement.textContent = text;
+      if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) {
+        message.textContent = text;
+        scheduleClose();
+        return;
+      }
+      function tick() {
+        message.textContent += characters[index++];
+        if (index < characters.length) typingTimer = setTimeout(tick, 28);
+        else scheduleClose();
+      }
+      typingTimer = setTimeout(tick, 28);
+    }
     function speak(line) {
       if (muted || document.hidden || document.querySelector("dialog[open]")) return;
       currentLine = line;
       lastSpoke = Date.now();
-      message.textContent = translated(line);
       bubble.hidden = false;
       chat.setAttribute("aria-expanded", "true");
       clearTimeout(reactionTimer);
       container.classList.remove("pepe-react");
-      // One short nod per message; no continuous idle animation.
+      // A short nod when a new message starts.
       void chat.offsetWidth;
       container.classList.add("pepe-react");
       reactionTimer = setTimeout(() => container.classList.remove("pepe-react"), 500);
-      scheduleClose();
       labels();
+      typeCurrentLine();
     }
     function nextLine() {
       if (currentContext && !seenContexts.has(currentContext[0])) {
@@ -356,7 +379,10 @@
         close();
       }
     });
-    window.addEventListener("languagechange", labels);
+    window.addEventListener("languagechange", () => {
+      labels();
+      if (currentLine && !bubble.hidden) typeCurrentLine();
+    });
     window.addEventListener("storage", (event) => {
       if (event.key === "pepe-muted") {
         muted = event.newValue === "true";

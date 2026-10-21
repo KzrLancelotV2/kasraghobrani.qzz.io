@@ -1,5 +1,18 @@
 (() => {
   const zh = {
+    "My main interests are AI4Life and AI4Science, with research experience in computational biology, deep learning, and network science.": "我的主要兴趣是 AI4Life 和 AI4Science，研究经历涉及计算生物学、深度学习和网络科学。",
+    "BISON: Cross-Dataset Learning for Unseen-Compound Perturbation Prediction": "BISON：用于未见化合物扰动预测的跨数据集学习",
+    "Co-developed BISON, a cross-dataset learning framework for predicting transcriptional responses to unseen compounds, during an in-person internship under Prof. Stan Z. Li. Co-first author of the resulting paper, submitted to ICLR; preprint, 2026.": "在 Stan Z. Li 教授指导下的线下科研实习期间，参与开发了 BISON——一个用于预测细胞对未见化合物的转录响应的跨数据集学习框架。作为共同第一作者，相关论文已投稿至 ICLR，预印本发表于 2026 年。",
+    "Chemical Perturbation Prediction": "化学扰动预测",
+    "Drug Discovery": "药物发现",
+    "Read the BISON preprint on arXiv ↗": "在 arXiv 阅读 BISON 预印本 ↗",
+    "Research under Dr. Ahmad Kalhor on efficient training methods for deep learning models, including vision transformers, and machine learning methods for graph-structured data and complex networks. Research interests include graph representation learning, computer vision, and optimization.": "在 Ahmad Kalhor 博士指导下，研究包括视觉 Transformer 在内的深度学习模型的高效训练方法，以及面向图结构数据和复杂网络的机器学习方法。研究兴趣包括图表征学习、计算机视觉与优化。",
+    "Locating Debunkers for Rumor Mitigation in Directed Networks": "有向网络中用于抑制谣言传播的辟谣者定位",
+    "Research under Prof. Tao Zhou on mitigating rumor propagation in directed social networks. First author of a paper introducing the Hybrid Marginal Influence (HMI) framework, in preparation for submission to Physical Review E.": "在 Tao Zhou 教授指导下，研究有向社交网络中的谣言传播抑制。作为第一作者，撰写了提出混合边际影响力（HMI）框架的论文，目前正准备投稿至 Physical Review E。",
+    "Westlake University · Jul 13 – Sep 16, 2026": "西湖大学 · 2026年7月13日–9月16日",
+    "AI for Scientific Simulation and Discovery Lab": "人工智能科学模拟与发现实验室",
+    "UESTC · 2025": "电子科技大学 · 2025年",
+
     "Kasra holding a piglet": "Kasra 抱着一只小猪",
     "Research Intern": "科研实习生",
     "Beta Lab": "Beta 实验室",

@@ -2,14 +2,14 @@
 #pepe-container button { font: 13px/1.4 'Share Tech Mono', 'Microsoft YaHei', system-ui, sans-serif; color: #d9edf0; cursor: pointer; pointer-events: auto; }
 #pepe-container button:focus-visible { outline: 2px solid #00f5ff; outline-offset: 4px; }
 #pepe-chat { display: flex; flex-direction: column; align-items: center; padding: 0; border: 0; border-radius: 12px; background: transparent; }
-#pepe-container #pepe-mascot { display: block; width: 245px !important; max-width: calc(100vw - 20px); height: auto; user-select: none; transform-origin: center bottom; filter: drop-shadow(0 0 6px #00f5ff66); transition: filter .2s; }
-#pepe-chat:hover #pepe-mascot { filter: drop-shadow(0 0 10px #00f5ff99); }
+#pepe-container #pepe-mascot { display: block; width: 245px !important; max-width: calc(100vw - 20px); height: auto; user-select: none; transform-origin: center bottom; animation: pepeFloat 2.8s ease-in-out infinite; filter: drop-shadow(0 0 7px #00f5ff) drop-shadow(0 0 14px rgba(255,43,214,.65)); transition: filter .2s; }
+#pepe-chat:hover #pepe-mascot { filter: drop-shadow(0 0 10px #39ff14) drop-shadow(0 0 20px #00f5ff); }
 #pepe-hint { border: 1px solid #00f5ff55; border-radius: 20px; padding: 5px 12px; background: #0a1020ee; }
 #pepe-mute { min-height: 32px; padding: 4px 12px; margin-right: 12px; border: 0; border-radius: 8px; background: #0a1020e6; color: #a7b8c9 !important; }
 #pepe-mute:hover { color: #fff !important; }
-#pepe-bubble { position: relative; box-sizing: border-box; width: max-content; max-width: min(290px, calc(100vw - 32px)); margin: 0 0 2px; padding: 14px 38px 14px 16px; border: 1px solid #00f5ff66; border-radius: 14px; background: #080d1af5; box-shadow: 0 8px 26px #0005; pointer-events: auto; }
+#pepe-bubble { position: relative; box-sizing: border-box; width: max-content; max-width: min(340px, calc(100vw - 32px)); margin: 0 0 12px; padding: 12px 38px 12px 15px; border: 1px solid #00f5ff; border-radius: 16px; background: rgba(6,6,20,.92); box-shadow: 0 0 14px rgba(0,245,255,.55), 0 0 28px rgba(255,43,214,.25), inset 0 0 14px rgba(0,245,255,.08); pointer-events: auto; }
 #pepe-bubble[hidden] { display: none !important; }
-#pepe-message { margin: 0; color: #e8faff; font: 15px/1.6 'Share Tech Mono', 'Microsoft YaHei', system-ui, sans-serif; text-shadow: none; letter-spacing: 0; }
+#pepe-message { margin: 0; color: #e8faff; font: 19px/1.4 'Share Tech Mono', 'Microsoft YaHei', monospace; text-shadow: none; letter-spacing: 0; }
 #pepe-dismiss { position: absolute; right: 3px; top: 3px; width: 32px; height: 32px; padding: 0; border: 0; border-radius: 8px; background: transparent; font-size: 20px !important; }
 #pepe-container[data-muted="true"] #pepe-mascot { filter: saturate(.5); }
 #pepe-container.pepe-react #pepe-mascot { animation: pepeNod .45s ease-out; }
@@ -19,10 +19,13 @@ body:has(dialog[open]) #pepe-container { visibility: hidden; }
   #pepe-container { right: 10px; bottom: 10px; gap: 3px; }
   #pepe-hint { font-size: 12px; padding: 7px 10px; }
   #pepe-mute { min-height: 44px; margin-right: 0; }
-  #pepe-bubble { max-width: min(250px, calc(100vw - 24px)); padding-right: 44px; }
+  #pepe-bubble { max-width: min(340px, calc(100vw - 24px)); padding-right: 44px; }
   #pepe-dismiss { width: 40px; height: 40px; }
-  #pepe-message { font-size: 14px; }
 }
 @media (prefers-reduced-motion: reduce) {
   #pepe-container #pepe-mascot { animation: none !important; transition: none; }
 }
+
+#pepe-bubble::after { content: ""; position: absolute; right: 22px; bottom: -8px; width: 14px; height: 14px; background: rgba(6,6,20,.92); border-right: 1px solid #00f5ff; border-bottom: 1px solid #00f5ff; transform: rotate(45deg); }
+#pepe-announcement { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+@keyframes pepeFloat { 0%,100% { transform: translateY(0) rotate(0); } 25% { transform: translateY(-4px) rotate(-1deg); } 50% { transform: translateY(-8px) rotate(0); } 75% { transform: translateY(-4px) rotate(1deg); } }

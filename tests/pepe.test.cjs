@@ -5,7 +5,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const source = fs.readFileSync(path.join(__dirname, '../assets/js/pepe.js'), 'utf8');
 // A small event/DOM fixture: no browser, network, or real localStorage is used.
-function mount({ page = 'index', storage = new Map(), blockedStorage = false } = {}) {
+function mount({ page = 'index', storage = new Map(), blockedStorage = false, reducedMotion = true } = {}) {
   const nodes = new Map(), timers = new Map();
   let now = 0, timerId = 0, observer;
   class Element extends EventTarget {
@@ -24,7 +24,7 @@ function mount({ page = 'index', storage = new Map(), blockedStorage = false } =
   document.querySelector = selector => selector === 'dialog[open]' ? (document.modalOpen ? {} : null) : nodes.get(selector) || null;
   document.body = { append: e => nodes.set(e.id, e) };
   for (const selector of ['#ai-for-life-sciences', '#efficient-deep-learning', '#rumor-mitigation', '.experience-section']) { const e = new Element(); e.selector = selector; nodes.set(selector, e); }
-  const window = new EventTarget(); window.siteI18n = { language: 'en' };
+  const window = new EventTarget(); window.siteI18n = { language: 'en' }; window.matchMedia = () => ({ matches: reducedMotion });
   class Observer { constructor(fn) { observer = fn; } observe() {} }
   window.IntersectionObserver = Observer;
   vm.runInNewContext(source, { window, document, location: { pathname: `/${page}.html` },
@@ -75,4 +75,27 @@ test('all page pools have bilingual lines and work without storage', () => {
     const p=mount({page,blockedStorage:true});
     for (let i=0;i<8;i++) { p.language('en'); p.get('pepe-chat').click(); assert.ok(p.get('pepe-message').textContent.length>10); p.language('zh'); assert.match(p.get('pepe-message').textContent,/[\u4e00-\u9fff]/); }
   }
+});
+
+test('original 28ms typing pace, restart on language change, and cancellation on dismiss', () => {
+  const p = mount({reducedMotion:false}); p.get('pepe-chat').click();
+  const english = p.get('pepe-announcement').textContent;
+  assert.equal(p.get('pepe-message').textContent, '');
+  p.advance(28); assert.equal(p.get('pepe-message').textContent, english.slice(0,1));
+  p.advance(28); assert.equal(p.get('pepe-message').textContent, english.slice(0,2));
+  p.language('zh'); const chinese = p.get('pepe-announcement').textContent;
+  assert.equal(p.get('pepe-message').textContent, '');
+  p.advance(28); assert.equal(p.get('pepe-message').textContent, Array.from(chinese)[0]);
+  p.advance(4000); assert.equal(p.get('pepe-message').textContent, chinese);
+  p.get('pepe-chat').click(); p.advance(56); p.get('pepe-dismiss').click();
+  p.advance(10000); assert.equal(p.get('pepe-message').textContent, '');
+  assert.equal(p.get('pepe-bubble').hidden,true);
+});
+test('rapid taps cancel the previous line; reading time starts after typing finishes', () => {
+  const p = mount({reducedMotion:false}); p.get('pepe-chat').click(); p.advance(56);
+  p.get('pepe-chat').click(); const text = p.get('pepe-announcement').textContent;
+  const duration = Array.from(text).length * 28;
+  p.advance(duration); assert.equal(p.get('pepe-message').textContent,text);
+  p.advance(11999); assert.equal(p.get('pepe-bubble').hidden,false);
+  p.advance(1); assert.equal(p.get('pepe-bubble').hidden,true);
 });
