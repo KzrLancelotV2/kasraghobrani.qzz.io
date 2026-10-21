@@ -2,8 +2,7 @@
 .language-switch button { min-height: 36px; min-width: 48px; padding: 7px 11px; border: 0; background: #0b1123; color: #d6e6ed; font: 14px system-ui, sans-serif; cursor: pointer; }
 .language-switch button[aria-pressed="true"] { background: #00e4ee; color: #07101a; }
 .language-switch button:focus-visible { outline: 2px solid #ff2bd6; outline-offset: -3px; }
-html:lang(zh-CN) body { font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; }
-html:lang(zh-CN) h1, html:lang(zh-CN) h2, html:lang(zh-CN) nav a, html:lang(zh-CN) .socials a, html:lang(zh-CN) .contact-item strong { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; letter-spacing: .04em; }
+html:lang(zh-CN) body { font-family: "Share Tech Mono", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", monospace; }
+html:lang(zh-CN) h1, html:lang(zh-CN) h2, html:lang(zh-CN) nav a, html:lang(zh-CN) .socials a, html:lang(zh-CN) .contact-item strong { font-family: "Orbitron", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; }
 html:lang(zh-CN) p { line-height: 1.9; }
-html:lang(zh-CN) #pepe-bubble { font-family: "PingFang SC", "Microsoft YaHei", sans-serif !important; }
 @media (max-width: 700px) { .language-switch { margin: 5px 8px; } .language-switch button { min-height: 44px; } }

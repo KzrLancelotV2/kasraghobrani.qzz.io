@@ -2,7 +2,7 @@
 #pepe-container button { font: 13px/1.4 'Share Tech Mono', 'Microsoft YaHei', system-ui, sans-serif; color: #d9edf0; cursor: pointer; pointer-events: auto; }
 #pepe-container button:focus-visible { outline: 2px solid #00f5ff; outline-offset: 4px; }
 #pepe-chat { display: flex; flex-direction: column; align-items: center; padding: 0; border: 0; border-radius: 12px; background: transparent; }
-#pepe-mascot { display: block; width: 245px; height: auto; user-select: none; transform-origin: center bottom; filter: drop-shadow(0 0 6px #00f5ff66); transition: filter .2s; }
+#pepe-container #pepe-mascot { display: block; width: 245px !important; max-width: calc(100vw - 20px); height: auto; user-select: none; transform-origin: center bottom; filter: drop-shadow(0 0 6px #00f5ff66); transition: filter .2s; }
 #pepe-chat:hover #pepe-mascot { filter: drop-shadow(0 0 10px #00f5ff99); }
 #pepe-hint { border: 1px solid #00f5ff55; border-radius: 20px; padding: 5px 12px; background: #0a1020ee; }
 #pepe-mute { min-height: 32px; padding: 4px 12px; margin-right: 12px; border: 0; border-radius: 8px; background: #0a1020e6; color: #a7b8c9 !important; }
@@ -17,7 +17,6 @@ body:has(dialog[open]) #pepe-container { visibility: hidden; }
 @keyframes pepeNod { 0%,100% { transform: rotate(0); } 45% { transform: rotate(-5deg) translateY(-3px); } }
 @media (max-width: 700px) {
   #pepe-container { right: 10px; bottom: 10px; gap: 3px; }
-  #pepe-mascot { width: 90px; }
   #pepe-hint { font-size: 12px; padding: 7px 10px; }
   #pepe-mute { min-height: 44px; margin-right: 0; }
   #pepe-bubble { max-width: min(250px, calc(100vw - 24px)); padding-right: 44px; }
