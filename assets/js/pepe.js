@@ -3,140 +3,164 @@
   const dialogues = {
   "home": [
     [
-      "Hi. I'm Pepe. I mostly look after this corner.",
-      "你好，我是 Pepe。我主要负责看着这个角落。"
+      "An academic website with a frog. Someone had final approval on this.",
+      "学术网站上放一只青蛙。这事居然有人批准了。"
     ],
     [
-      "The short version: computer engineering, with an interest in biology.",
-      "简单来说：学计算机工程，也对生物学感兴趣。"
+      "The font says distant future. The email address says please hire me.",
+      "字体写着遥远的未来，邮箱写着请考虑录用我。"
     ],
     [
-      "Research is one tab over. I'll come along.",
-      "科研就在旁边那个标签页。我也会跟过去。"
+      "You came to assess a researcher and clicked the frog. I respect your methods.",
+      "你本来是来了解研究者的，结果点了青蛙。我尊重你的研究方法。"
     ],
     [
-      "You can mute me. No hard feelings.",
-      "可以把我静音。我不会介意。"
+      "I think, therefore I am. The hosting bill suggests there are other conditions.",
+      "我思故我在。不过，托管账单暗示还有其他条件。"
     ],
     [
-      "The Google Scholar link has the papers. I have the commentary.",
-      "论文在谷歌学术链接里。我负责说两句。"
+      "You can change the entire atmosphere with one button. Outside this website, it's harder.",
+      "按一下就能改变整个氛围。出了这个网站，就没这么容易了。"
+    ],
+    [
+      "The interests include economics. My salary remains a theoretical quantity.",
+      "兴趣里写了经济学。我的工资仍然只存在于理论中。"
     ],
     [
       "Not everything needs a chatbot. Apparently this website needed a frog.",
       "不是所有东西都需要聊天机器人。不过这个网站似乎需要一只青蛙。"
+    ],
+    [
+      "A personal website is a very elaborate answer to 'so, what do you do?'",
+      "个人网站，就是把“你是做什么的？”这个问题回答得特别隆重。"
     ]
   ],
   "about": [
     [
-      "That's a piglet in the photo. We work in different departments.",
-      "照片里是只小猪。我们不在同一个部门。"
+      "The piglet got a photo. I got a permanent customer-facing role.",
+      "小猪负责拍照。我负责永久接待访客。"
     ],
     [
-      "The TL;DR is below, if you're just having a quick look.",
-      "如果只想快速了解一下，下面有简要介绍。"
+      "The TL;DR is below. An entire person, compressed for your convenience.",
+      "下面有简要版。为了方便阅读，一个人被压缩成了几行。"
     ],
     [
-      "Yes, the video games made it onto the academic website.",
-      "没错，电子游戏也写进了学术网站。"
+      "Video games made the biography. Finally, a claim with thousands of hours of evidence.",
+      "电子游戏写进了简介。终于有一项经历，有几千小时的证据支持。"
     ],
     [
-      "I was not consulted about the choice of photo.",
-      "选照片的时候没有征求我的意见。"
+      "People contain multitudes. CVs prefer bullet points.",
+      "人有很多面。简历更喜欢分条列举。"
     ],
     [
-      "Biology is a reasonable interest for someone who keeps a frog around.",
-      "身边有只青蛙，对生物学感兴趣也很合理。"
+      "The gym is an interesting hobby. Paying to move heavy things, then putting them back.",
+      "健身挺有意思。花钱把重物搬起来，再放回原处。"
     ],
     [
-      "There is a person behind the research links. This is that part.",
-      "科研链接背后也是个普通人。这一页讲的就是这些。"
+      "Learning languages: acquiring several new ways to realize you missed the joke.",
+      "学语言：学会用好几种语言发现自己没听懂笑话。"
+    ],
+    [
+      "I also enjoy travel. So far, mostly between tabs.",
+      "我也喜欢旅行。目前主要是在标签页之间。"
+    ],
+    [
+      "A longer life sounds good. Presumably we're also working on better Tuesdays.",
+      "活得更久听起来不错。想必也在研究怎么让普通的星期二好过一点。"
     ]
   ],
   "research": [
     [
-      "The project summaries are up here; the research experience is below.",
-      "上面是项目简介，下面是科研经历。"
+      "A model of a cell. The cell did not provide documentation.",
+      "给细胞建模型。细胞没有提供文档。"
     ],
     [
-      "A useful model should survive a question it wasn't expecting.",
-      "有用的模型应该经得起意料之外的问题。"
+      "The model is very confident. An admirable quality in something that has never been outside.",
+      "模型非常自信。对于一个从没出过门的东西来说，挺难得。"
     ],
     [
-      "The interesting part is usually what the model gets wrong.",
-      "模型出错的地方往往最有意思。"
+      "The result was unexpected. So was the amount of time spent checking for a typo.",
+      "结果出乎意料。排查是不是打错字花的时间，也出乎意料。"
     ],
     [
-      "Biology does not always cooperate with a neat diagram.",
-      "生物学不总是配合我们画出整齐的示意图。"
+      "The map is not the territory. The territory is under no obligation to be differentiable.",
+      "地图不等于领土。领土也没有义务保证自己可微。"
     ],
     [
-      "The papers are linked at the top. No frog commentary in those.",
-      "论文链接在顶部。里面没有青蛙的点评。"
+      "A useful theory should risk being wrong. Otherwise it's just very well formatted.",
+      "有用的理论得有可能被证明是错的。否则只是排版很好看。"
     ],
     [
-      "I can point you to the summaries. I cannot peer-review the work.",
-      "我可以给你指指简介在哪儿。同行评审就不行了。"
+      "Correlation is not causation. It does, however, get invited to a lot of meetings.",
+      "相关不等于因果。不过，相关确实经常被请去开会。"
     ],
     [
-      "A clean result is nice. Knowing why it works is better.",
-      "结果漂亮固然好，知道它为什么有效更好。"
+      "We ask nature a question, then spend six months checking whether we asked it properly.",
+      "我们问大自然一个问题，然后花六个月确认自己有没有问对。"
     ],
     [
-      "Sometimes the next experiment is a better question.",
-      "有时候，下一步实验就是提出一个更好的问题。"
+      "The plot looks convincing. I would still like to meet the error bars.",
+      "图看起来挺有说服力。不过我还是想见见误差条。"
     ]
   ],
   "contact": [
     [
-      "The email addresses are here. I don't have access to the inbox.",
-      "邮箱地址在这里。我没有收件箱的访问权限。"
+      "'I hope this email finds you well' is a bold opening hypothesis.",
+      "“希望你一切都好”——邮件开头就提出了一个大胆假设。"
     ],
     [
-      "A little context in your message is always helpful.",
-      "发消息时带上一点背景信息，总是有帮助的。"
+      "No contact form. You are trusted to operate email without a tutorial.",
+      "没有联系表单。我们相信你不看教程也会发邮件。"
     ],
     [
-      "GitHub is here too, if you'd rather start with the code.",
-      "如果想先看代码，这里也有 GitHub 链接。"
+      "A short email can contain a good idea. This remains legal.",
+      "简短的邮件也可以有好想法。目前并不违规。"
     ],
     [
-      "I handle the corner. Kasra handles the correspondence.",
-      "我负责这个角落。Kasra 负责回信。"
+      "I handle the corner. Kasra handles the consequences of listing his email publicly.",
+      "我负责这个角落。Kasra 负责承担公开邮箱的后果。"
     ],
     [
-      "This is probably the most practical page on the site.",
-      "这大概是整个网站最实用的一页。"
+      "Every collaboration starts with someone deciding an email probably won't be that awkward.",
+      "每次合作，都始于某个人觉得：发封邮件应该也没那么尴尬。"
     ],
     [
-      "No contact form. Just the addresses.",
-      "没有联系表单，直接用这里的地址就好。"
+      "You don't need to call it a 'potential synergy.' You can just say what you're thinking.",
+      "不必称之为“潜在协同效应”。直接说你的想法就行。"
+    ],
+    [
+      "The distance between two people is sometimes one unsent draft.",
+      "两个人之间的距离，有时就是一封没发出去的草稿。"
+    ],
+    [
+      "I have opinions, but no inbox. There may be a lesson in that.",
+      "我有很多意见，但没有收件箱。这里面可能有点人生智慧。"
     ]
   ],
   "gallery": [
     [
-      "Yes, that's me in the photo. I'm taller in person.",
-      "没错，照片里那个就是我。我本人更高。"
+      "Yes, that's me in the photo. Before I settled into this desk job.",
+      "没错，照片里是我。那时我还没开始坐班。"
     ],
     [
-      "There seems to be a recurring frog theme here.",
-      "这里好像经常出现青蛙。"
+      "Photographic evidence that someone occasionally goes outside.",
+      "证明某人偶尔也会出门的影像证据。"
     ],
     [
-      "Tap a photo to see the full version.",
-      "点开照片就能看大图。"
+      "The piglet declined a website role. Better at negotiating than I am.",
+      "小猪拒绝了网站的工作。谈条件这方面，它比我强。"
     ],
     [
-      "The piglet has not agreed to become a website assistant.",
-      "小猪还没答应来当网站助手。"
+      "A photograph keeps the light. The rest is rather unfairly left to memory.",
+      "照片留住了光。剩下的全交给记忆，多少有点不公平。"
     ],
     [
-      "A few things that don't fit on a CV.",
-      "一些不太适合写进简历的日常。"
+      "None of this fits on a CV. A point in its favor.",
+      "这些都不适合写进简历。这恰好是优点。"
     ],
     [
-      "I'll step aside while you look at a photo.",
-      "你看大图的时候，我会先让开。"
+      "Click a photo for the larger version. I remain this size. Budget decision.",
+      "点照片可以看大图。我还是这么大。预算决定的。"
     ]
   ],
   "interests": [
@@ -145,50 +169,50 @@
       "兴趣不少。还好这是清单，不是课表。"
     ],
     [
-      "Biology and computing have plenty to talk about.",
-      "生物学和计算机之间有很多值得聊的东西。"
+      "Biology and computing. Two fields famous for things behaving exactly as expected.",
+      "生物学和计算机。两个以“一切都按预期运行”闻名的领域。"
     ],
     [
-      "The research page shows where some of these interests lead.",
-      "其中一些兴趣走向了哪些研究，可以去科研页看看。"
+      "An interest is allowed to remain an interest. It doesn't owe LinkedIn an announcement.",
+      "兴趣也可以就只是兴趣。不欠领英一篇动态。"
     ],
     [
-      "Networks turn up in more places than you'd expect.",
-      "网络出现的地方，比想象中还多。"
+      "Economics studies scarcity. The tabs in his browser do not.",
+      "经济学研究稀缺。他的浏览器标签页显然不研究。"
     ],
     [
-      "An interest is allowed to remain an interest.",
-      "兴趣也可以就只是兴趣。"
+      "Curiosity is useful. It is less cooperative about bedtime.",
+      "好奇心很有用。就是不太配合睡觉时间。"
     ],
     [
-      "I would add ponds, but this isn't my website.",
-      "我想加上池塘，不过这不是我的网站。"
+      "I suggested ponds. Apparently the scope was already too broad.",
+      "我建议加上池塘。听说范围已经够广了。"
     ]
   ],
   "default": [
     [
-      "Still here, in the corner.",
-      "我还在这里，在角落里。"
+      "Still here. Persistence looks a lot like having nowhere else to go.",
+      "还在这儿。坚持和无处可去，看起来常常很像。"
     ],
     [
-      "Tap again if you'd like another thought.",
-      "想再听一句的话，可以再点一下。"
+      "Another click. We are both choosing to spend our time this way.",
+      "又点了一下。我们都选择了这样度过这段时间。"
     ],
     [
-      "You can mute me whenever you like.",
-      "随时都可以把我静音。"
+      "You can mute me. Philosophers rarely offer that feature.",
+      "你可以把我静音。哲学家很少提供这个功能。"
     ],
     [
-      "I'll keep this brief.",
-      "我就简单说两句。"
+      "I don't have an answer to everything. This has not stopped most people.",
+      "我并不是什么都知道。不过这通常也没拦住别人开口。"
     ],
     [
-      "I don't have an answer to everything. A useful quality in a frog.",
-      "我并不是什么都知道。对一只青蛙来说，这是个优点。"
+      "Doing nothing looks much more respectable when you call it contemplation.",
+      "什么都不做，叫作“沉思”就体面多了。"
     ],
     [
-      "Take your time. I'm not going anywhere.",
-      "慢慢看，我不会跑的。"
+      "You don't have to get something useful out of every minute. Even this one.",
+      "不用每一分钟都有收获。包括这一分钟。"
     ]
   ]
 };
@@ -196,50 +220,50 @@
   [
     "#ai-for-life-sciences",
     [
-      "Here the question is how cells respond when something changes.",
-      "这里关注的是：当条件发生变化时，细胞会怎样响应。"
+      "We ask how cells respond to change. They have declined to fill out a questionnaire.",
+      "我们研究细胞如何应对变化。它们拒绝填写问卷。"
     ]
   ],
   [
     "#efficient-deep-learning",
     [
-      "This project looks at learning methods and training efficiency.",
-      "这个项目关注学习方法和训练效率。"
+      "Learning efficiently. A lovely ambition for both the model and the person training it.",
+      "高效学习。对模型和训练模型的人来说，都是个美好的愿望。"
     ]
   ],
   [
     "#rumor-mitigation",
     [
-      "A network can carry information. It can carry a rumor just as well.",
-      "网络能传播信息，也同样能传播谣言。"
+      "A rumor has no citations and excellent distribution. Academia could learn something. Preferably not that.",
+      "谣言没有参考文献，传播却很好。学术界可以学点什么。最好别学这个。"
     ]
   ],
   [
     ".experience-section",
     [
-      "These are the labs and people behind the work.",
-      "这里是这些研究背后的实验室和指导老师。"
+      "The labs and people behind the work. Science is less solitary than the author photo suggests.",
+      "研究背后的实验室和伙伴。科研没有作者照片看起来那么孤独。"
     ]
   ],
   [
     ".about-photo",
     [
-      "A different animal gets the spotlight on this page. I'm fine with it.",
-      "这一页的主角换成了另一种动物。我没意见。"
+      "The piglet gets held. I get clicked. We all make our compromises.",
+      "小猪被抱着，我被点着。各有各的妥协。"
     ]
   ],
   [
     ".about-page ul",
     [
-      "The quick version. Including the important bit about video games.",
-      "这是简要版，也包括电子游戏这个重要部分。"
+      "A whole person in bullet points. At least the video games survived the compression.",
+      "几条文字概括一个人。至少电子游戏没在压缩过程中丢掉。"
     ]
   ],
   [
     ".gallery-grid",
     [
-      "Tap a photo; I'll stay out of the way while it's open.",
-      "点开照片吧，看大图的时候我会先让开。"
+      "Tap a photo. I'll move out of the way, an underrated social skill.",
+      "点开照片吧。我会让开——一种被低估的社交能力。"
     ]
   ]
 ];
