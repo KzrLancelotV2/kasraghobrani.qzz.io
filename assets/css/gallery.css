@@ -4,7 +4,7 @@
 .gallery-heading h1 { font-size: clamp(1.8rem, 4vw, 3rem); line-height: 1.25; }
 nav a[aria-current="page"] { color: var(--neon-cyan); border-bottom: 2px solid currentColor; padding-bottom: 6px; }
 .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 24px; align-items: start; }
-.gallery-card { margin: 0; max-width: 440px; overflow: hidden; border: 1px solid rgba(0,245,255,.25); border-radius: 14px; background: rgba(255,255,255,.035); }
+.gallery-card { margin: 0; max-width: 440px; overflow: hidden; border: 1px solid rgba(255,85,71,.25); border-radius: 14px; background: rgba(255,255,255,.035); }
 .gallery-card a { display: block; overflow: hidden; }
 .gallery-card img { display: block; width: 100%; height: auto; transition: filter .2s; }
 .gallery-card a:hover img { filter: brightness(1.1); }
