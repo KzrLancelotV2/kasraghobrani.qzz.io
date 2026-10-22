@@ -413,6 +413,12 @@
       }
     }
     labels();
+    // Greet on each page visit, including back/forward restores, without enabling scroll reactions.
+    function greet() {
+      if (!muted && !document.hidden) speak(nextLine());
+    }
+    greet();
+    window.addEventListener("pageshow", event => { if (event.persisted) greet(); });
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
   else init();

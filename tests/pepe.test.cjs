@@ -38,12 +38,26 @@ function mount({ page = 'index', storage = new Map(), blockedStorage = false, re
     language(lang) { window.siteI18n.language = lang; window.dispatchEvent(new Event('languagechange')); }
   };
 }
-test('quiet initial state, discoverable hint, non-repeating dialogue cycle', () => {
-  const p = mount(); assert.equal(p.get('pepe-bubble').hidden, true); assert.equal(p.get('pepe-hint').textContent, 'Tap to chat');
-  p.advance(60000); assert.equal(p.get('pepe-bubble').hidden, true);
-  const lines = new Set(); for (let i=0;i<6;i++) { p.get('pepe-chat').click(); lines.add(p.get('pepe-message').textContent); }
-  assert.equal(lines.size, 6); assert.equal(p.get('pepe-chat').attrs['aria-expanded'], 'true');
+test('greets once on arrival and taps continue the non-repeating dialogue cycle', () => {
+  const p = mount(); assert.equal(p.get('pepe-bubble').hidden, false);
+  const lines = new Set([p.get('pepe-message').textContent]);
+  for (let i=0;i<5;i++) { p.get('pepe-chat').click(); lines.add(p.get('pepe-message').textContent); }
+  assert.equal(lines.size,6);
+  p.advance(60000); assert.equal(p.get('pepe-bubble').hidden,true);
 });
+
+test('every page greets unless muted, including back/forward restores', () => {
+  for (const page of ['index','about','research','contact','gallery','interests']) {
+    const p=mount({page}); assert.equal(p.get('pepe-bubble').hidden,false);
+    p.get('pepe-dismiss').click();
+    const restore=new Event('pageshow'); restore.persisted=true;
+    p.window.dispatchEvent(restore); assert.equal(p.get('pepe-bubble').hidden,false);
+    p.get('pepe-mute').click(); p.window.dispatchEvent(restore);
+    assert.equal(p.get('pepe-bubble').hidden,true);
+    const q=mount({page,storage:p.storage}); assert.equal(q.get('pepe-bubble').hidden,true);
+  }
+});
+
 test('mute closes speech and persists across page navigation; tapping restores it', () => {
   const p = mount(); p.get('pepe-chat').click(); p.get('pepe-mute').click(); assert.equal(p.get('pepe-bubble').hidden, true);
   const q = mount({page:'research',storage:p.storage}); q.enter('#ai-for-life-sciences'); q.advance(60000);
@@ -64,7 +78,7 @@ test('auto-dismiss, Escape, hidden pages and photo dialogs', () => {
   p.document.modalOpen=false; p.get('pepe-chat').click(); p.document.hidden=true; p.document.dispatchEvent(new Event('visibilitychange')); assert.equal(p.get('pepe-bubble').hidden,true);
 });
 test('section reaction requires engagement, respects cooldown, and occurs at most once', () => {
-  const p=mount({page:'research'}); p.enter('#ai-for-life-sciences'); assert.equal(p.get('pepe-bubble').hidden,true);
+  const p=mount({page:'research'}); p.advance(12000); p.enter('#ai-for-life-sciences'); assert.equal(p.get('pepe-bubble').hidden,true);
   p.get('pepe-chat').click(); assert.match(p.get('pepe-message').textContent,/cells respond/);
   p.enter('#efficient-deep-learning'); assert.match(p.get('pepe-message').textContent,/cells respond/);
   p.advance(21000); p.enter('.experience-section'); assert.match(p.get('pepe-message').textContent,/labs and people/);
