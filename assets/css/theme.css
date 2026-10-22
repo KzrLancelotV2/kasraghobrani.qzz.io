@@ -1,0 +1,88 @@
+/* Both palettes share the same typography, layout, and animations. */
+:root {
+  --palette-accent: #00f5ff;
+  --palette-accent-rgb: 0, 245, 255;
+  --palette-secondary: #ff2bd6;
+  --palette-secondary-rgb: 255, 43, 214;
+  --palette-purple: #8f00ff;
+  --palette-purple-rgb: 143, 0, 255;
+  --palette-hover: #39ff14;
+  --palette-hover-rgb: 57, 255, 20;
+  --palette-body: #050510;
+  --palette-body-rgb: 5, 5, 16;
+  --palette-text: #e8faff;
+  --palette-text-rgb: 232, 250, 255;
+  --palette-muted: #9fb7c4;
+  --palette-muted-rgb: 159, 183, 196;
+  --palette-gradient-edge: #03030a;
+  --palette-gradient-edge-rgb: 3, 3, 10;
+  --palette-gradient-center: #080820;
+  --palette-gradient-center-rgb: 8, 8, 32;
+  --palette-control-text: #d9edf0;
+  --palette-control-text-rgb: 217, 237, 240;
+  --palette-control-bg: #0a1020;
+  --palette-control-bg-rgb: 10, 16, 32;
+  --palette-control-muted: #a7b8c9;
+  --palette-control-muted-rgb: 167, 184, 201;
+  --palette-language-border: #54727e;
+  --palette-language-border-rgb: 84, 114, 126;
+  --palette-language-bg: #0b1123;
+  --palette-language-bg-rgb: 11, 17, 35;
+  --palette-language-text: #d6e6ed;
+  --palette-language-text-rgb: 214, 230, 237;
+  --palette-language-active: #00e4ee;
+  --palette-language-active-rgb: 0, 228, 238;
+  --palette-language-ink: #07101a;
+  --palette-language-ink-rgb: 7, 16, 26;
+  --palette-card: #0c0c20;
+  --palette-card-rgb: 12, 12, 32;
+  --palette-bubble: #060614;
+  --palette-bubble-rgb: 6, 6, 20;
+}
+:root[data-palette="red-gold"] {
+  --palette-accent: #ff5547;
+  --palette-accent-rgb: 255, 85, 71;
+  --palette-secondary: #ffd34e;
+  --palette-secondary-rgb: 255, 211, 78;
+  --palette-purple: #9a1c20;
+  --palette-purple-rgb: 154, 28, 32;
+  --palette-hover: #ffd34e;
+  --palette-hover-rgb: 255, 211, 78;
+  --palette-body: #120a08;
+  --palette-body-rgb: 18, 10, 8;
+  --palette-text: #fff1d6;
+  --palette-text-rgb: 255, 241, 214;
+  --palette-muted: #cbb59b;
+  --palette-muted-rgb: 203, 181, 155;
+  --palette-gradient-edge: #100807;
+  --palette-gradient-edge-rgb: 16, 8, 7;
+  --palette-gradient-center: #26100d;
+  --palette-gradient-center-rgb: 38, 16, 13;
+  --palette-control-text: #fff1d6;
+  --palette-control-text-rgb: 255, 241, 214;
+  --palette-control-bg: #21100d;
+  --palette-control-bg-rgb: 33, 16, 13;
+  --palette-control-muted: #cbb59b;
+  --palette-control-muted-rgb: 203, 181, 155;
+  --palette-language-border: #875341;
+  --palette-language-border-rgb: 135, 83, 65;
+  --palette-language-bg: #21100d;
+  --palette-language-bg-rgb: 33, 16, 13;
+  --palette-language-text: #f5e2c5;
+  --palette-language-text-rgb: 245, 226, 197;
+  --palette-language-active: #ffd34e;
+  --palette-language-active-rgb: 255, 211, 78;
+  --palette-language-ink: #1b0b08;
+  --palette-language-ink-rgb: 27, 11, 8;
+  --palette-card: #190d0c;
+  --palette-card-rgb: 25, 13, 12;
+  --palette-bubble: #190d0c;
+  --palette-bubble-rgb: 25, 13, 12;
+}
+
+#theme-toggle { position:absolute; right:24px; top:50%; transform:translateY(-50%); display:inline-flex; align-items:center; gap:9px; min-height:44px; padding:8px 12px; border:1px solid var(--palette-accent); border-radius:8px; background:var(--palette-control-bg); color:var(--palette-text); font:14px 'Share Tech Mono','Microsoft YaHei',monospace; cursor:pointer; }
+#theme-toggle[hidden] { display:none; }
+#theme-toggle:hover { border-color:var(--palette-secondary); }
+#theme-toggle:focus-visible { outline:2px solid var(--palette-secondary); outline-offset:3px; }
+.theme-swatch { width:16px; height:16px; flex:none; border-radius:50%; background:linear-gradient(135deg,var(--palette-accent) 50%,var(--palette-secondary) 50%); }
+@media(max-width:1050px) { #theme-toggle { position:static; transform:none; vertical-align:middle; margin:5px 8px; } }

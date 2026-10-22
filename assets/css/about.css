@@ -2,7 +2,7 @@
 .about-copy { grid-column: 1; grid-row: 1; min-width: 0; }
 .about-copy p:first-child { margin-top: 0; }
 .about-copy p:last-child { margin-bottom: 0; }
-.about-photo { grid-column: 2; grid-row: 1; margin: 0; padding: 6px; border: 1px solid rgba(255,85,71,.3); border-radius: 18px; background: rgba(255,255,255,.03); box-shadow: 0 12px 30px rgba(0,0,0,.22); }
+.about-photo { grid-column: 2; grid-row: 1; margin: 0; padding: 6px; border: 1px solid rgba(var(--palette-accent-rgb), .3); border-radius: 18px; background: rgba(255,255,255,.03); box-shadow: 0 12px 30px rgba(0,0,0,.22); }
 .about-photo img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 57% center; border-radius: 12px; }
 @media (max-width: 800px) {
   .about-bio { grid-template-columns: minmax(0, 1fr); gap: 28px; }

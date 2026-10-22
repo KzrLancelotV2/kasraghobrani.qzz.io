@@ -1,7 +1,7 @@
-.language-switch { display: inline-flex; vertical-align: middle; margin: 8px 12px; border: 1px solid #875341; border-radius: 7px; overflow: hidden; }
-.language-switch button { min-height: 36px; min-width: 48px; padding: 7px 11px; border: 0; background: #21100d; color: #f5e2c5; font: 14px system-ui, sans-serif; cursor: pointer; }
-.language-switch button[aria-pressed="true"] { background: #ffd34e; color: #1b0b08; }
-.language-switch button:focus-visible { outline: 2px solid #ffd34e; outline-offset: -3px; }
+.language-switch { display: inline-flex; vertical-align: middle; margin: 8px 12px; border: 1px solid var(--palette-language-border); border-radius: 7px; overflow: hidden; }
+.language-switch button { min-height: 36px; min-width: 48px; padding: 7px 11px; border: 0; background: var(--palette-language-bg); color: var(--palette-language-text); font: 14px system-ui, sans-serif; cursor: pointer; }
+.language-switch button[aria-pressed="true"] { background: var(--palette-language-active); color: var(--palette-language-ink); }
+.language-switch button:focus-visible { outline: 2px solid var(--palette-secondary); outline-offset: -3px; }
 html:lang(zh-CN) body { font-family: "Share Tech Mono", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", monospace; }
 html:lang(zh-CN) h1, html:lang(zh-CN) h2, html:lang(zh-CN) nav a, html:lang(zh-CN) .socials a, html:lang(zh-CN) .contact-item strong { font-family: "Orbitron", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; }
 html:lang(zh-CN) p { line-height: 1.9; }
