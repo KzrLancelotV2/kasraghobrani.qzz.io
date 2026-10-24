@@ -1,10 +1,10 @@
 # Keep the template navigation aligned with the main website.
 main:
   - title: "Home"
-    url: /index.html
+    url: /
   - title: "About"
-    url: /about.html
+    url: /about/
   - title: "Research"
-    url: /research.html
+    url: /research/
   - title: "Contact"
-    url: /contact.html
+    url: /contact/
